@@ -1,0 +1,75 @@
+/* ==============================
+   Global Styles with CSS Variables
+   ============================== */
+   @import url('https://fonts.googleapis.com/css2?family=DynaPuff');
+
+   :root {
+    /* Color Variables */
+    --primary-color: #7336b5;
+    --secondary-color: rgb(165, 71, 231);  
+    --background-color: rgb(191, 191, 191);
+    --text-color: #000000;
+    --link-hover-color: #ffffff;
+
+    /* Font Variables */
+    --font-family: "DynaPuff", serif;
+    --font-size-base: 16px;
+    --font-size-heading: 30px;
+    --line-height-base: 1.6;
+
+    /* Spacing Variables */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 200px;
+    --max-width: 1200px;
+}
+
+/* ==============================
+   Global Reset - Ensures consistency across browsers
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+   Base Styles
+   ============================== */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: var(--line-height-base);
+}
+
+/* ==============================
+   Headings
+   ============================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: var(--spacing-small);
+}
+h1{
+    font-size: var(--font-size-heading);
+}
+
+/* ==============================
+   Paragraphs
+   ============================== */
+p {
+    margin-bottom: var(--spacing-small);
+}
+
+/* ==============================
+   Links
+   ============================== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+img{
+    max-width 100%;
+    height:auto;
+}
