@@ -1,8 +1,8 @@
 
 <div class="hero-container">
     <div class="text-content">
-        <h1>Hello there!</h1>
-        <h1>My name is Eliska Vrzalova</h1>
+        <h1 >Hello there!</h1>
+        <h1 id="my-name">My name is Eliska Vrzalova</h1>
         <p>I am a college student aspiring to be UX/ UI Designer, Concept Artist, and just the most creative version of myself.</p>
         <div class="portfolio-button">
             <button type="button">Explore my portfolio!</button>
@@ -19,7 +19,18 @@
       background-color:rgb(220, 220, 215);
         
     }
+    #my-name::before{
+        content:'My name is Eliska Vrzalova';
+        color: var(--primary-color);
+        overflow:hidden;
+        position:absolute;
+        width:0%;
+        transition:all 0.5s;
+    }
     
+    #my-name:hover::before{
+        width:100%;
+    }
    .hero-container{
     padding:0;
     margin:0;

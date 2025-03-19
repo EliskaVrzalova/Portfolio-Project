@@ -33,8 +33,20 @@
 
     nav ul li a{
         text-decoration: none;
-        color:white;
+        color:rgb(209, 204, 204);
         font-weight: bold;
         padding-left: var(--spacing-large);
     }
+ a:before{
+        content:'portfolio';
+        color:white;
+        position: absolute;
+        overflow:hidden;
+        width:0%;
+        transition:all 0.5s;
+    }
+    a:hover:before{
+        width:100%;
+    }
+
     </style>
