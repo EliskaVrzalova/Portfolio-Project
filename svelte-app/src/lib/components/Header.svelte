@@ -14,12 +14,13 @@
 
 <style>
 header {
-    background-color: var(--primary-color);
+    border-bottom: 2px groove rgb(0, 0, 0);
     display: flex;
     justify-content: space-between;
     padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     align-items: center;
-    border-radius: 25px;
 }
 
 .profile-picture{
@@ -42,7 +43,7 @@ header {
 a.home-link:hover .profile-picture {
     transform: scale(1.05);
     transition: transform 0.3s ease;
-    box-shadow: 0 0 10px rgba(255,255,255,0.5);
+    box-shadow: 0 0 10px rgb(115, 54, 181, 0.9);
 }
 
 

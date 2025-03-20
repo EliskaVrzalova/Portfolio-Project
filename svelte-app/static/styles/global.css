@@ -5,7 +5,7 @@
 
    :root {
     /* Color Variables */
-    --primary-color: #7336b5;
+    --primary-color: rgb(115, 54, 181);
     --secondary-color: rgb(165, 71, 231);  
     --background-color: rgb(191, 191, 191);
     --text-color: #000000;
@@ -13,8 +13,8 @@
 
     /* Font Variables */
     --font-family: "DynaPuff", serif;
-    --font-size-base: 16px;
-    --font-size-heading: 30px;
+    --font-size-base: 20px;
+    --font-size-heading: clamp(2rem, 2.5vw, 3.5rem);
     --line-height-base: 1.6;
 
     /* Spacing Variables */
