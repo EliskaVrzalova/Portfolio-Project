@@ -1,3 +1,35 @@
+<script>
+    let showModal = false;
+    let formData = {
+        name: '',
+        email: '',
+        phone: '',
+        rating: '',
+        message: ''
+    };
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        // Process form data here
+        console.log('Form submitted:', formData);
+        showModal = true;
+    }
+
+    function closeModal() {
+        showModal = false;
+
+        formData = {
+            name: '',
+            email: '',
+            phone: '',
+            message: ''
+        };
+    }
+
+
+</script>
+
+
 <!-- Background floating shapes -->
 <div class="background-elements">
     <div class="floating-shape shape1"></div>
@@ -8,9 +40,11 @@
 
 <div class="hero-container">
     <div class="text-content">
+        <div class="hero-text">
         <h1 >Hello there!</h1>
         <h1 id="my-name">My name is Eliska Vrzalova</h1>
         <p>I am a college student aspiring to be UX/ UI Designer, Concept Artist, and just the most creative version of myself.</p>
+    </div>
         <a href="/portfolio" class="portfolio-button-link">
         <div class="portfolio-button">
             <button type="button">Explore my portfolio!</button>
@@ -21,11 +55,69 @@
         <img src="/hero.png" alt="homepage hero image" id="hero">
     </div>
 </div>
+<div class="socials">
+    <div class="text-socials">
+    <h2>Find me on:</h2>
+</div>
+<div class="icons-socials">
+    <img src="/instagram.png" alt="instagram logo">
+    <img src="/github.png" alt="instagram logo">
+    <img src="/discord.png" alt="instagram logo">
+    <img src="/twitter.png" alt="instagram logo">
+    <img src="/gmail-logo.png" alt="instagram logo">
+</div>
+</div>
 
-<style>
-    body{
-      background-color:rgb(220, 220, 215);
+
+<div class="form-container">
+    <form on:submit={handleSubmit} class="contact-form">
+        <h2>Get in touch with me right here and right now!</h2>
         
+        <div class="form-row">
+            <div class="form-field full-width">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" bind:value={formData.name} placeholder="Enter your full name" required />
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-field">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" bind:value={formData.email} placeholder="Enter your email" required />
+            </div>
+            <div class="form-field">
+                <label for="phone">Your Phone</label>
+                <input type="tel" id="phone" bind:value={formData.phone} placeholder="Enter your phone number" />
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-field full-width">
+                <label for="message">Your Message</label>
+                <textarea id="message" bind:value={formData.message} placeholder="Type your message here..." rows="5" required></textarea>
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <button type="submit" class="submit-button">Submit</button>
+        </div>
+    </form>
+</div>
+
+{#if showModal}
+<div class="modal">
+    <div class="modal-content">
+        <h3>Thank you for your message!</h3>
+        <p>I will respond as soon as possible</p>
+        <button on:click={closeModal} class="close-modal">Close</button>
+    </div>
+</div>
+{/if}
+<style>
+    .hero-text h1{
+        font-size:3rem;
+    }
+    .hero-text p{
+        font-size: 1.8rem;
     }
     #my-name {
         position: relative;
@@ -47,6 +139,8 @@
         width:100%;
     }
    .hero-container{
+   width:100vw;
+   height:100vh;
     padding:1rem;
     margin:0;
     display:flex;
@@ -193,5 +287,105 @@
     50% { transform: translate(-20px, 40px) rotate(-5deg); }
     75% { transform: translate(-40px, -20px) rotate(2deg); }
 }
+.socials{
+    display: flex;
+    flex-direction: column;
+    width: 100vw; 
+    max-width: 1400px; /* max-width for large screens */
+    height:auto;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 30px;
+    box-shadow: 0 10px 5px rgb(157, 45, 198);
+    margin: 0 auto 2rem auto; /* Center horizontally and add bottom margin */
+    padding: 1rem 2rem; 
+    justify-content:flex-start;
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; 
+}
+.text-socials {
+    text-align: center; 
+    font-size:2rem;
+    margin-bottom: 2rem;
+}
+.icons-socials{
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+    gap: 2rem; 
+    width: 100%; 
+    padding: 0.5rem 1rem; 
+    margin-top:4rem;
+    height: 100px; 
+    overflow: visible; /* Allow hover effects to extend beyond container */
+}
+
+.icons-socials img {
+    width: 200px; 
+    height: 200px; 
+    padding: 0; 
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+/* When the parent container is hovered, fade all icons slightly */
+.icons-socials:hover img {
+    opacity: 0.6; /* Reduce opacity of all icons */
+    transform: scale(0.9); /* Slightly shrink all icons */
+}
+
+/* When a specific icon is hovered, bring it back to full opacity and size or larger */
+.icons-socials img:hover {
+    transform: scale(1.2);
+    opacity: 1; 
+    z-index: 1; 
+}
+
+
+
+
+
+/*form*/
+.form-container h2{
+    text-align: center;
+}
+.form-row {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    .form-field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .full-width {
+        width: 100%;
+    }
+
+    input, textarea {
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        border: 1px solid rgb(255, 255, 255, 0.7);
+        background: rgb(157, 45, 198,0.2);
+        color: white;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgb(157, 45, 198);
+    }
+
+    input:focus, textarea:focus {
+        outline: none;
+        transform: translateY(-2px);
+    }
+    label{
+        margin-bottom:0.25rem;
+        margin-top:0.25rem;
+    }
+
 
 </style>
