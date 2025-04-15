@@ -67,8 +67,14 @@
     <img src="/gmail-logo.png" alt="instagram logo">
 </div>
 </div>
-
-
+<div class="bottom-container">
+<div class="butterflies">
+    <img src="/butterflies.png" alt="flock of butterflies image">
+</div>
+<div class="contact-me-grid">
+<div class="form-picture">
+    <img src="/contactPic.png" alt="picture of Eliska next to the contact form">
+</div>
 <div class="form-container">
     <form on:submit={handleSubmit} class="contact-form">
         <h2>Get in touch with me right here and right now!</h2>
@@ -101,6 +107,8 @@
             <button type="submit" class="submit-button">Submit</button>
         </div>
     </form>
+</div>
+</div>
 </div>
 
 {#if showModal}
@@ -346,8 +354,11 @@
 
 
 /*form*/
+
 .form-container h2{
     text-align: center;
+    grid-area: 1/ 2/ 1 / 2;
+    
 }
 .form-row {
         display: flex;
@@ -385,6 +396,148 @@
     label{
         margin-bottom:0.25rem;
         margin-top:0.25rem;
+    }
+    .submit-button{
+        position:relative;
+        text-align: center;
+        font-size: 1.5rem;
+        font-family:"DynaPuff", serif;
+        padding:10px 20px 10px 20px;
+        border-radius:50px;
+        margin-top:0.8rem;
+        border:none;
+        transition: all .4s ease-in-out;
+       background-color: #a779bb;
+       overflow: hidden;
+    }
+
+    .submit-button::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(157, 45, 198, 0.7),
+            transparent
+        );
+        transform: skewX(-25deg);
+        transition: left 0.5s ease;
+    }
+
+    .submit-button:hover::before {
+        left: 150%; /* Move past the button */
+        transition: left 0.5s ease;
+       
+    }
+    .submit-button:hover{
+        transform: scale(1.1);
+    }
+
+    .contact-me-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0; /* Remove default gap */
+        align-items: center;
+        max-width:1400px;
+        padding: 2rem;
+        width: 100%;
+        position: relative;
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+    }
+    .form-picture {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .form-picture > img{
+        width: 280px;
+        height: 450px;
+        margin-right: -5px; /* Increased negative margin to move image closer to form */
+        margin-bottom: 40px;
+    }
+
+    .form-container {
+        padding-left: 10px; /* Reduced padding to bring form closer to image */
+    }
+    .bottom-container{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .butterflies {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+    }
+    .butterflies > img{
+      width:100%;
+      height:1000px;
+       opacity: 0.7;
+    }
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 250px;
+        border-radius: 50px;
+        background:var(--primary-color);
+        border: solid 3px white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+    .close-modal {
+        align-items: center;
+        padding: 0.9rem 2.5rem;
+        border: none;
+        border-radius: 10px;
+        border: 1px solid white;
+        background-color: var(--secondary-color);
+        color: rgb(255, 255, 255);
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .close-modal:hover {
+        color: var(--secondary-color);
+        background-color: #ffffff;
+        transform: translateY(-3px) scale(1.2);
+        box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .close-modal:active {
+        transform: translateY(1px);
+    }
+
+    .modal-content {
+        padding: 2rem;
+        text-align: center;
+        border-radius: 15px;
+        max-width: 500px;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
     }
 
 
