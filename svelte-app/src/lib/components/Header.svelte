@@ -15,6 +15,7 @@
 <style>
 header {
     border-bottom: 2px groove rgb(0, 0, 0);
+    margin:0;
     display: flex;
     justify-content: space-between;
     padding: 1rem;

@@ -16,6 +16,8 @@
         position:relative;
         bottom: 0;
         width: 100%;
+        box-sizing: border-box;
+        z-index: -2;
     }
 
     /* Mobile: Reduce padding for a more compact look */
