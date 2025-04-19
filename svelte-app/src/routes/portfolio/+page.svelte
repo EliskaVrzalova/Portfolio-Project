@@ -56,42 +56,42 @@
             <div class="text">
                 <div class="title">Web design and Development</div>
                 <div class="description">Design meets code. I learn how to bring websites to life with HTML, CSS, and JavaScript — clean, creative, and built with users in mind.</div>
-                <button>See More</button>
+                <button><a href="/web design">See More</a></button>
             </div>
         </div>
         <div class="item" style="background-image: url('/game-design.png');">
             <div class="text">
                 <div class="title">Game Design</div>
                 <div class="description">Visual side of game design — using pixel art, UI, and atmosphere to bring worlds to life and guide the player’s experience.</div>
-                <button>See More</button>
+                <button><a href="/game design">See More</a></button>
             </div>
         </div>
         <div class="item" style="background-image: url('/game-development (2).png');">
             <div class="text">
                 <div class="title">Game Development</div>
-                <div class="description">Game development in C++ — I coded few gameplay systems, mechanics, and worlds from scratch with original game assets.</div>
-                <button>See More</button>
+                <div class="description">Game development in C++ — I coded few gameplay systems, mechanics, and worlds from scratch with original game assets.<br> All my games are available at my Github.</div>
+                <button><a href="/game dev">See More</a></button>
             </div>
         </div>
         <div class="item" style="background-image: url('/digital-art.png');">
             <div class="text">
                 <div class="title">Digital Art</div>
                 <div class="description">I’m refining my digital art skills, working with software like Photoshop and more including 3D to create detailed, dynamic pieces that push my creativity and technique.</div>
-                <button>See More</button>
+                <button><a href="/digital art">See More</a></button>
             </div>
         </div>
         <div class="item" style="background-image: url('/tattoo-design.png');">
             <div class="text">
                 <div class="title">Tattoo Design</div>
                 <div class="description">I design tattoos for friends and anyone looking for something personal and meaningful. I love turning ideas and stories into designs that people carry with them forever.</div>
-                <button>See More</button>
+                <button><a href="/tattoo design">See More</a></button>
             </div>
         </div>
         <div class="item" style="background-image: url('/paintings.png');">
             <div class="text">
                 <div class="title">Paintings</div>
                 <div class="description">I started with painting. That creative foundation now inspires my work in game design, pixel art, and UI.</div>
-                <button>See More</button>
+                <button><a href="/paintings">See More</a></button>
             </div>
         </div>
     </div>

@@ -14,17 +14,29 @@
 
 <style>
 header {
-    border-bottom: 2px groove rgb(0, 0, 0);
-    margin:0;
+    position: relative;
+    margin: 0;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 1rem 1.2rem 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
     align-items: center;
 }
 
-.profile-picture{
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: linear-gradient(to right,#7336b5, #bc82eb, #7336b5);
+   
+}
+
+.profile-picture {
     display: block;
     width: 80px;
     height: 80px;
@@ -34,27 +46,33 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .home-link {
-    display: block;
     text-decoration: none;
+    color: inherit;
+    display: inline-block;
 }
 
-a.home-link:hover .profile-picture {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-    box-shadow: 0 0 10px rgb(115, 54, 181, 0.9);
+.home-link:hover .profile-picture {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px white;
 }
 
-
-@media (max-width: 768px){
-    header{
+@media (max-width: 768px) {
+    header {
         flex-direction: column;
         text-align: center;
+        padding-bottom: 1.8rem;
     }
-    .profile-picture{
+    
+    .profile-picture {
         justify-content: center;
+    }
+    
+    header::after {
+        height: 3px;
     }
 }
 </style>

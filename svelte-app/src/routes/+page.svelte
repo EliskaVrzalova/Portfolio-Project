@@ -26,7 +26,12 @@
         };
     }
 
-
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 </script>
 
 
@@ -54,6 +59,26 @@
     <div class="hero-image-container">
         <img src="/hero.png" alt="homepage hero image" id="hero">
     </div>
+</div>
+<div class="divider"></div>
+<div class="focus-areas">
+    <div class="text-focus-areas">
+    <h2>I mainly focus on:</h2>
+</div>
+<div class="icons-focus-areas">
+    <div class="focus-item">
+        <img src="/front-end-programming.png" alt="front end programming icon">
+        <h3>Front-end Development</h3>
+    </div>
+    <div class="focus-item">
+        <img src="/uiux.png" alt="UI and UX design icon">
+        <h3>UI/UX Design</h3>
+    </div>
+    <div class="focus-item">
+        <img src="/website-design.png" alt="Web design icon">
+        <h3>Web Design</h3>
+    </div>
+</div>
 </div>
 <div class="socials">
     <div class="text-socials">
@@ -110,6 +135,10 @@
 </div>
 </div>
 </div>
+<div class="arrow-buttons">
+    <button class="up" on:click={scrollToTop}>↑</button>
+</div>
+
 
 {#if showModal}
 <div class="modal">
@@ -131,21 +160,7 @@
         position: relative;
         display: inline-block;
     }
-    #my-name::before{
-        content:'My name is Eliska Vrzalova';
-        color: var(--primary-color);
-        overflow:hidden;
-        position:absolute;
-        left: 0;
-        top: 0;
-        white-space: nowrap;
-        width:0%;
-        transition:all 0.5s;
-    }
-    
-    #my-name:hover::before{
-        width:100%;
-    }
+ 
    .hero-container{
    width:100vw;
    height:100vh;
@@ -154,6 +169,7 @@
     display:flex;
     justify-content: space-between;
     align-items:flex-start;
+
    }
    .hero-image-container{
      justify-content: flex-start;
@@ -161,6 +177,13 @@
      margin-top: -8rem;
      filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.7));
    }
+
+   .divider {
+            height: 5px;
+            border-radius: 30px;
+            background: linear-gradient(to right,#7336b5, #bc82eb, #7336b5);
+        }
+
    .text-content{
     padding-left:6rem;
    }
@@ -252,7 +275,7 @@
     width: 300px;
     height: 300px;
     background: var(--primary-color);
-    top: 10%;
+    top: 25%;
     left: 30%;
     z-index: -1;
     animation-delay: 0s;
@@ -263,8 +286,8 @@
     width: 300px;
     height: 300px;
     background: var(--secondary-color);
-    top: 65%;
-    right: 25%;
+    top: 70%;
+    right: 30%;
     animation-delay: -5s;
     border-radius:  40% 50% 60% 50%;
 }
@@ -272,19 +295,20 @@
 .shape3 {
     width: 250px;
     height: 250px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     bottom: 10%;
     left: 10%;
     animation-delay: -10s;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    z-index:-2;
 }
 
 .shape4 {
     width: 280px;
     height: 280px;
-    background: var(--secondary-color);
-    top: 15%;
-    right: 15%;
+    background: var(--primary-color);
+    top: 20%;
+    right: 10%;
     animation-delay: -15s;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
@@ -304,19 +328,34 @@
     min-height: 500px;
     background-color: rgb(255, 255, 255, 0.2);
     border-radius: 30px;
-    box-shadow: 0 10px 5px rgb(157, 45, 198);
+    box-shadow: 0 10px 5px #9d2dc6;
     margin: 0 auto 2rem auto; /* Center horizontally and add bottom margin */
     padding: 1rem 2rem; 
     justify-content:flex-start;
     align-items: center; /* Center content horizontally */
     box-sizing: border-box; 
 }
-.text-socials {
+.focus-areas{
+    display: flex;
+    flex-direction: column;
+    width: 100vw; 
+    max-width: 1400px; /* max-width for large screens */
+    height:auto;
+    min-height: 500px;
+    margin: 0 auto 2rem auto; /* Center horizontally and add bottom margin */
+    padding: 1rem 2rem; 
+    justify-content:flex-start;
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; 
+}
+.text-socials,
+ .text-focus-areas{
     text-align: center; 
     font-size:2rem;
     margin-bottom: 2rem;
 }
-.icons-socials{
+.icons-socials,
+ .icons-focus-areas{
     display: flex;
     justify-content: center; /* Center icons horizontally */
     align-items: center; /* Center icons vertically */
@@ -327,8 +366,27 @@
     height: 100px; 
     overflow: visible; /* Allow hover effects to extend beyond container */
 }
+.icons-focus-areas{
+    gap:4rem;
+}
 
-.icons-socials img {
+.focus-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.focus-item h3 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    transition: opacity 0.5s ease;
+}
+
+.icons-socials img,
+ .icons-focus-areas img {
     width: 200px; 
     height: 200px; 
     padding: 0; 
@@ -336,6 +394,7 @@
     object-fit: contain; /* Maintain aspect ratio */
 }
 
+/* When the parent container is hovered, fade all icons slightly */
 /* When the parent container is hovered, fade all icons slightly */
 .icons-socials:hover img {
     opacity: 0.6; /* Reduce opacity of all icons */
@@ -349,6 +408,24 @@
     z-index: 1; 
 }
 
+/* Focus areas hover effects */
+.icons-focus-areas:hover .focus-item {
+    opacity: 0.6;
+}
+
+.icons-focus-areas:hover .focus-item img {
+    transform: scale(0.9);
+}
+
+.focus-item:hover {
+    opacity: 1 !important;
+    z-index: 1;
+}
+
+.focus-item:hover img {
+    transform: scale(1.2) !important;
+    opacity: 1;
+}
 
 
 
@@ -538,6 +615,28 @@
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+    }
+
+    /*go back to the top fo the page*/
+    .arrow-buttons{
+        margin-top: 4rem;
+        position: relative;
+        text-align: center;
+        width:100%;
+        bottom:30px;
+    }
+    .arrow-buttons button{
+        width:50px;
+        height:45px;
+        border-radius: 20px;
+        border:none;
+        margin: 0 5px;
+        transition: 0.3s;
+    }
+
+    .arrow-buttons button:hover{
+        transform: scale(1.1);
+        background-color: var(--primary-color);
     }
 
 
