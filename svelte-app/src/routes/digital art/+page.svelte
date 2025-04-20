@@ -1,33 +1,86 @@
 <script>
+    import { ImageViewer, PortfolioNav } from "$lib";
+    
     function scrollToTop() {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
-      }
-    </script>
+    }
     
+    // Image data with descriptions
+    const column1Images = [
+        {
+            src: "/oldmansketch.png",
+            alt: "Sketches drafts of old man",
+            description: "Early concept sketches of an elderly character. These drafts explore different facial features and expressions to capture the essence of age and wisdom."
+        },
+        {
+            src: "/concept-art.jpg",
+            alt: "Concept art for fictional character",
+            description: "Character concept art showing various design iterations. These explorations helped establish the final visual direction for this fictional character."
+        },
+        {
+            src: "/character_turn_around (1).png",
+            alt: "Fictional character turn around",
+            description: "Character turnaround sheet showing the character from multiple angles. This reference ensures consistency when viewed from different perspectives.Later used for animation"
+        }
+    ];
+    
+    const column2Images = [
+        {
+            src: "/old man.jpg",
+            alt: "Final art of the old man",
+            description: "Final art of the elderly character."
+        },
+        {
+            src: "/final-art.jpg",
+            alt: "Final art of the fictional character", 
+            description: "Completed character illustration showing the final design with detailed shading, texturing, and color treatment typical for comics and anime style."
+        },
+        {
+            src: "/metamorphosis assets (1).png",
+            alt: "Assets for a video game",
+            description: "Game asset collection for 'Metamorphosis', featuring various elements designed for the game environment."
+        }
+    ];
+</script>
+<div class="nav-container">
+    <PortfolioNav />
+</div>
     <div class="container">
         <h2 class="title">Digital Art</h2>
         <div class="gallery">
             <div class="column">
                 <div class="picture">
-                    <img src="/oldmansketch.png" alt="Sketches drafts of old man">
-                    <img src="/concept-art.jpg" alt="Concept art for fictional character">
-                    <img src="/character_turn_around (1).png" alt="Fictional character turn around">
+                    {#each column1Images as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
                 </div>
             </div>
             <div class="column">
                 <div class="picture">
-                    <img src="/old man.jpg" alt="Final art of the old man">
-                    <img src="/final-art.jpg" alt="Final art of the fictional character">
-                    <img src="/metamorphosis assets (1).png" alt="Assets for a videogame">
+                    {#each column2Images as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
                 </div>
             </div>
         </div>
     </div>
     <div class="arrow-buttons">
-        <button class="up" on:click={scrollToTop()}>↑</button>
+        <button class="up" on:click={scrollToTop}>↑</button>
     </div>
     
     
@@ -55,25 +108,18 @@
             gap:20px;
         }
     
-        .picture >img{
-            width:100%;
-            height: auto;
-            object-fit: cover;
+        .picture {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+        }
+        
+        .image-wrapper {
+            width: 100%;
+            margin-bottom: 10px;
             border-radius: 5px;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-    
-        /* Set up hover state for the gallery */
-        .gallery:hover .picture img {
-            opacity: 0.6; /* Reduce opacity of all images */
-            transform: scale(0.8); /* Slightly shrink all images */
-        }
-    
-        /* When a specific image is hovered, bring it back to full opacity and scale up */
-        .gallery .picture img:hover {
-            transform: scale(1.1);
-            opacity: 1; 
-            z-index: 1; 
+            overflow: hidden;
         }
         
         .arrow-buttons{

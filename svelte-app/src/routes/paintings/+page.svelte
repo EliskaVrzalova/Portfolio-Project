@@ -1,32 +1,76 @@
 <script>
+    import { ImageViewer, PortfolioNav } from "$lib";
+    
     function scrollToTop() {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
-      }
-    </script>
+    }
     
+    // Paintings data with descriptions
+    const column1Images = [
+        {
+            src: "/London.jpg",
+            alt: "Painting: London city street",
+            description: "London street, Acrylic on canvas."
+        },
+        {
+            src: "/japan.jpg",
+            alt: "Painting: abstract autoportrait",
+            description: "An abstract self-portrait influenced by Japanese artistic styles."
+        }
+    ];
+    
+    const column2Images = [
+        {
+            src: "/astronaut.jpg",
+            alt: "Painting: Astronaut in space",
+            description: "A surreal depiction of an astronaut floating in space, Acrylic on wooden desk."
+        },
+        {
+            src: "/jacket.jpg",
+            alt: "Painting: abstract portrait of a man",
+            description: "An abstract portrait of a man. Acrylic on jacket."
+        }
+    ];
+</script>
+<div class="nav-container">
+    <PortfolioNav />
+</div>
     <div class="container">
         <h2 class="title">Paintings</h2>
         <div class="gallery">
             <div class="column">
                 <div class="picture">
-                    <img src="/London.jpg" alt="Painting: London city street">
-                    
-                    <img src="/japan.jpg" alt="Painting: abstract autoportrait">
+                    {#each column1Images as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
                 </div>
             </div>
             <div class="column">
                 <div class="picture">
-                    <img src="/astronaut.jpg" alt="Painting: Astronaut in space">
-                    <img src="/jacket.jpg" alt="Painting: abstract portrait of a man">
+                    {#each column2Images as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
                 </div>
             </div>
         </div>
     </div>
     <div class="arrow-buttons">
-        <button class="up" on:click={scrollToTop()}>↑</button>
+        <button class="up" on:click={scrollToTop}>↑</button>
     </div>
     
     
@@ -54,25 +98,18 @@
             gap:20px;
         }
     
-        .picture >img{
-            width:100%;
-            height: auto;
-            object-fit: cover;
+        .picture {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+        }
+        
+        .image-wrapper {
+            width: 100%;
+            margin-bottom: 10px;
             border-radius: 5px;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-    
-        /* Set up hover state for the gallery */
-        .gallery:hover .picture img {
-            opacity: 0.6; /* Reduce opacity of all images */
-            transform: scale(0.8); /* Slightly shrink all images */
-        }
-    
-        /* When a specific image is hovered, bring it back to full opacity and scale up */
-        .gallery .picture img:hover {
-            transform: scale(1.1);
-            opacity: 1; 
-            z-index: 1; 
+            overflow: hidden;
         }
         
         .arrow-buttons{

@@ -57,7 +57,6 @@ header::after {
 
 .home-link:hover .profile-picture {
     transform: scale(1.1);
-    box-shadow: 5px 5px 10px white;
 }
 
 @media (max-width: 768px) {

@@ -1,32 +1,81 @@
 <script>
-function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  }
+    import { ImageViewer, PortfolioNav } from "$lib";
+    
+    function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+    }
+    
+    // Tattoo design images with descriptions
+    const column1Images = [
+        {
+            src: "/kenjaku.JPG",
+            alt: "Tattoo design: Kenjaku, Jujutsu Kaisen",
+            description: "Custom tattoo design featuring Kenjaku from Jujutsu Kaisen. This intricate design captures the character's sinister essence through detailed linework and shading techniques ideal for body art."
+        },
+        {
+            src: "/dragon.png",
+            alt: "Tattoo design from first draft to final design on body: japanese dragon",
+            description: "Evolution of a Japanese dragon tattoo design from initial concept to final application. This traditional-inspired piece showcases the dynamic flow and scale patterns characteristic of Eastern dragon mythology."
+        }
+    ];
+    
+    const column2Images = [
+        {
+            src: "/fox.JPG",
+            alt: "Tattoo design: japanese fox Kitsune",
+            description: "Japanese Kitsune (fox) tattoo design blending traditional and contemporary styles. The mythological fox spirit is depicted with flowing nine tails and mystical elements representing wisdom and cunning."
+        },
+        {
+            src: "/choso (1).png",
+            alt: "Multiple design drafts: Choso, Jujutsu Kaisen",
+            description: "Exploratory drafts for a Choso (Jujutsu Kaisen) tattoo design. These sketches experiment with different poses and compositional elements to capture the character's unique abilities and personality."
+        },
+        {
+            src: "/choso (2).JPG",
+            alt: "Tattoo design: Choso, Jujutsu Kaisen",
+            description: "Finalized tattoo design of Choso from Jujutsu Kaisen. This refined illustration features clean linework and balanced composition optimized for skin application while preserving the character's distinct features."
+        }
+    ];
 </script>
-
+<div class="nav-container">
+    <PortfolioNav />
+</div>
 <div class="container">
     <h2 class="title">Tattoo Design</h2>
     <div class="gallery">
         <div class="column">
             <div class="picture">
-                <img src="/kenjaku.JPG" alt="tattoo design: Kenjaku, Jujutsu Kaisen">
-                <img src="/dragon.png" alt="tattoo design from first draft to final design on body: japanese dragon">
+                {#each column1Images as image}
+                    <div class="image-wrapper">
+                        <ImageViewer 
+                            src={image.src} 
+                            alt={image.alt} 
+                            description={image.description} 
+                        />
+                    </div>
+                {/each}
             </div>
         </div>
         <div class="column">
             <div class="picture">
-                <img src="/fox.JPG" alt="tattoo design: japanese fox Kitsune">
-                <img src="/choso (1).png" alt="multiple design drafts: Choso, Jujutsu Kaisen">
-                <img src="/choso (2).JPG" alt="tattoo design: Choso, Jujutsu Kaisen">
+                {#each column2Images as image}
+                    <div class="image-wrapper">
+                        <ImageViewer 
+                            src={image.src} 
+                            alt={image.alt} 
+                            description={image.description} 
+                        />
+                    </div>
+                {/each}
             </div>
         </div>
     </div>
 </div>
 <div class="arrow-buttons">
-    <button class="up" on:click={scrollToTop()}>↑</button>
+    <button class="up" on:click={scrollToTop}>↑</button>
 </div>
 
 
@@ -54,25 +103,18 @@ function scrollToTop() {
         gap:20px;
     }
 
-    .picture >img{
-        width:100%;
-        height: auto;
-        object-fit: cover;
+    .picture {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .image-wrapper {
+        width: 100%;
+        margin-bottom: 10px;
         border-radius: 5px;
-        transition: transform 0.5s ease, opacity 0.5s ease;
-    }
-
-    /* Set up hover state for the gallery */
-    .gallery:hover .picture img {
-        opacity: 0.6; /* Reduce opacity of all images */
-        transform: scale(0.8); /* Slightly shrink all images */
-    }
-
-    /* When a specific image is hovered, bring it back to full opacity and scale up */
-    .gallery .picture img:hover {
-        transform: scale(1.1);
-        opacity: 1; 
-        z-index: 1; 
+        overflow: hidden;
     }
     
     .arrow-buttons{

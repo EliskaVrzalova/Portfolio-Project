@@ -112,7 +112,7 @@
         background: linear-gradient(to bottom, 
             rgba(0,0,0,0.1) 0%,
             rgba(0,0,0,0.3) 60%, 
-            rgba(0,0,0,0.75) 100%);
+            rgba(0,0,0,0.5) 100%);
         z-index: 0;
         pointer-events: none; /* Allows clicks to pass through */
     }
@@ -172,8 +172,9 @@
         height:400px;
         text-align: left;
         color:white;
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgb(115, 54, 181,0.7);
         border-radius: 30px;
+        box-shadow: 0 7px 15px rgb(255, 255, 255,0.5);
         padding:10px 30px;
         transform: translate(0, -50%);
         display:none;
@@ -208,7 +209,7 @@
         opacity: 0;
         animation: reveal 1s ease-in-out 0.6s 1 forwards;
         transition: all .4s ease-in-out;
-        background-color: #a779bb;
+        background-color: #ffffff;
         overflow: hidden;
         font-size: 1.2rem;
         font-family:"DynaPuff", serif;

@@ -1,36 +1,70 @@
 <script>
+    import { ImageViewer, VideoViewer, PortfolioNav } from "$lib";
+    
     function scrollToTop() {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
-      }
-    </script>
+    }
     
+    // Website content organized by sections
+    const videoContent = {
+        src: "/homepage.mp4",
+        poster: "/homepage.jpg",
+        alt: "Website homepage interaction video",
+        description: "Interactive demonstration of the movie website homepage. This video showcases the responsive navigation, and dynamic content that creates an engaging user experience."
+    };
+    
+    const websiteScreenshots = [
+        {
+            src: "/nosignal-homepage.png",
+            alt: "NoSignal website homepage",
+            description: "Homepage design for the No Signal Media website. The layout features a clean, dark aesthetic with high-contrast elements to highlight featured content and improve readability. The navigation system provides intuitive access to all site sections."
+        },
+        {
+            src: "/nosignal-movies.png",
+            alt: "NoSignal movies listing page",
+            description: "Theatre movies listing page showcasing the grid layout of film selections. Each card displays key information including release date, rating, and genre tags."
+        },
+        {
+            src: "/nosignal-contact.png",
+            alt: "NoSignal contact and suggestions page",
+            description: "Content suggestions and contact page, featuring an interactive form for user feedback and movie recommendations. The design maintains consistency with the site's overall aesthetic while providing clear input fields and submission controls."
+        }
+    ];
+</script>
+<div class="nav-container">
+    <PortfolioNav />
+</div>
     <div class="container">
-        <h2 class="title">Web design</h2>
-        <p>Team project website focused on movies. In this project done in the second year of my Bachelor's degree I took part in the overall design. Later in the development phase I was in charge of the homepage design, theatre movies pages design and the content suggestions page design.</p>
+        <h2 class="title">Web Design</h2>
+        <h3 class="second-title">Team project: website focused on movies</h3>
+        <p>In this project done in the second year of my Bachelor's degree I took part in the overall design. Later in the development phase I was in charge of the homepage design, theatre movies pages design and the content suggestions page design.</p>
+        
         <div class="gallery">
             <div class="column">
+                <div class="video-wrapper">
+                    <VideoViewer 
+                        src={videoContent.src}
+                        poster={videoContent.poster}
+                        alt={videoContent.alt}
+                        description={videoContent.description}
+                    />
+                </div>
+                
                 <div class="picture">
-                    
-                    <video 
-                        src="/homepage.mp4" 
-                        autoplay
-                        loop
-                        muted
-                        preload="metadata"
-                        poster="/homepage.jpg"
-                        playsinline
-                        class="video-element">
-                        Your browser does not support the video tag.
-                    </video>
-                    <img src="/nosignal-homepage.png" alt="website homepage">
-                    <img src="/nosignal-movies.png" alt="website page">
-                    <img src="/nosignal-contact.png" alt="website page">
+                    {#each websiteScreenshots as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
                 </div>
             </div>
-          
         </div>
     </div>
     <div class="arrow-buttons">
@@ -55,47 +89,43 @@
             text-align: center;
             margin-bottom: 4rem;
             font-size: 1.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        .second-title{
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin: 0;
         }
         .gallery{
             display:flex;
             gap: 20px;
-    
         }
+        
         .column{
             display:flex;
             flex-direction: column;
             gap:20px;
-        }
-    
-        .picture > img,
-        .picture > video {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 5px;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-    
-        /* Set up hover state for the gallery */
-        .gallery:hover .picture img,
-        .gallery:hover .picture video {
-            opacity: 0.6; /* Reduce opacity of all media */
-            transform: scale(0.8); /* Slightly shrink all media */
-        }
-    
-        /* When a specific media is hovered, bring it back to full opacity and scale up */
-        .gallery .picture img:hover,
-        .gallery .picture video:hover {
-            transform: scale(1.1);
-            opacity: 1; 
-            z-index: 1; 
+            flex: 1;
         }
         
-        /* Additional video-specific styles */
-        .video-element {
-            background-color: var(--primary-color);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
+        
+        .picture {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+        }
+        
+        .image-wrapper,
+        .video-wrapper {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
         }
         
         .arrow-buttons {

@@ -1,48 +1,107 @@
 <script>
+    import { ImageViewer, VideoViewer, PortfolioNav } from "$lib";
+    
     function scrollToTop() {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
-      }
-    </script>
+    }
     
+    // Game development projects
+    const gameProjects = [
+        {
+            title: "Candyland Adventure",
+            description: "Second year tudent project- great practice for me to familiarize myself with JavaScript",
+            video: {
+                src: "/candyland.mov",
+                poster: "/candyland-poster.jpg",
+                alt: "Candyland Adventure gameplay footage",
+                description: "Gameplay demonstration showcasing player movement, environmental interactions, and the candy-themed map design. The game features assest I created."
+            }
+        },
+        {
+            title: "Kafka's Metamorphosis",
+            description: "An experimental narrative game inspired by Franz Kafka's novella. This project was done in the first year of my degree course in a team. For this project I took the role of concepr artist and designer",
+            video: {
+                src: "/kafka.mp4",
+                poster: "/kafka-poster.jpg",
+                alt: "Kafka's Metamorphosis game footage",
+                description: "Metamorphosis gameplay which together with the dark aesthetics to Franz Kafka's story. "
+            }
+        },
+        {
+            title: "Space Shooter Arcade",
+            description: "A retro-inspired pixel art space shooter created with custom sprite work and classic arcade gameplay mechanics. My final first year project.",
+            image: {
+                src: "/SpaceShooter.jpg",
+                alt: "Pixel art space shooter arcade game",
+                description: "Instruction screen for the space shooter game."
+            }
+        }
+    ];
+</script>
+<div class="nav-container">
+    <PortfolioNav />
+</div>
     <div class="container">
         <h2 class="title">Game Development</h2>
+        
         <div class="gallery">
             <div class="column">
-                <div class="picture">
-                    <video 
-                        src="/candyland.mov" 
-                        autoplay
-                        loop
-                        muted
-                        preload="metadata"
-                        poster="/candyland-poster.jpg"
-                        playsinline
-                        class="video-element">
-                        Your browser does not support the video tag.
-                    </video>
+                <!-- First column: Candyland Adventure -->
+                <div class="project-card">
+                    <h3 class="project-title">{gameProjects[0].title}</h3>
+                    <p class="project-description">{gameProjects[0].description}</p>
+                    
+                    <div class="media-container">
+                        {#if gameProjects[0].video}
+                            <VideoViewer 
+                                src={gameProjects[0].video.src}
+                                poster={gameProjects[0].video.poster}
+                                alt={gameProjects[0].video.alt}
+                                description={gameProjects[0].video.description}
+                            />
+                        {:else if gameProjects[0].image}
+                            <ImageViewer 
+                                src={gameProjects[0].image.src}
+                                alt={gameProjects[0].image.alt}
+                                description={gameProjects[0].image.description}
+                            />
+                        {/if}
+                    </div>
                 </div>
             </div>
+            
             <div class="column">
-                <div class="picture">
-                    <video 
-                        src="/kafka.mp4" 
-                        autoplay
-                        loop
-                        muted
-                        preload="metadata"
-                        poster="/kafka-poster.jpg"
-                        playsinline
-                        class="video-element">
-                        Your browser does not support the video tag.
-                    </video>
-                    <img src="/SpaceShooter.jpg" alt="Pixel art space shooter arcade game">
-                </div>
+                <!-- Second column: Kafka and Space Shooter -->
+                {#each gameProjects.slice(1) as project}
+                    <div class="project-card">
+                        <h3 class="project-title">{project.title}</h3>
+                        <p class="project-description">{project.description}</p>
+                        
+                        <div class="media-container">
+                            {#if project.video}
+                                <VideoViewer 
+                                    src={project.video.src}
+                                    poster={project.video.poster}
+                                    alt={project.video.alt}
+                                    description={project.video.description}
+                                />
+                            {:else if project.image}
+                                <ImageViewer 
+                                    src={project.image.src}
+                                    alt={project.image.alt}
+                                    description={project.image.description}
+                                />
+                            {/if}
+                        </div>
+                    </div>
+                {/each}
             </div>
         </div>
     </div>
+    
     <div class="arrow-buttons">
         <button class="up" on:click={scrollToTop}>↑</button>
     </div>
@@ -57,50 +116,47 @@
         }
     
         .title{
-            margin-bottom: 4rem;
+            margin-bottom: 2rem;
             text-align: center;
             font-size: 4rem;
         }
-        .gallery{
-            display:flex;
+        
+        
+        .gallery {
+            display: flex;
             gap: 20px;
-    
-        }
-        .column{
-            display:flex;
-            flex-direction: column;
-            gap:20px;
-        }
-    
-        .picture > img,
-        .picture > video {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 5px;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-    
-        /* Set up hover state for the gallery */
-        .gallery:hover .picture img,
-        .gallery:hover .picture video {
-            opacity: 0.6; /* Reduce opacity of all media */
-            transform: scale(0.8); /* Slightly shrink all media */
-        }
-    
-        /* When a specific media is hovered, bring it back to full opacity and scale up */
-        .gallery .picture img:hover,
-        .gallery .picture video:hover {
-            transform: scale(1.1);
-            opacity: 1; 
-            z-index: 1; 
         }
         
-        /* Additional video-specific styles */
-        .video-element {
-            background-color: var(--primary-color);
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+        }
+        
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .project-title {
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin: 0;
+        }
+        
+        .project-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 0 0 1rem;
+        }
+        
+        .media-container {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
         }
         
         .arrow-buttons {
@@ -118,17 +174,26 @@
             border:none;
             margin: 0 5px;
             transition: 0.3s;
+            cursor: pointer;
         }
     
         .arrow-buttons button:hover{
             transform: scale(1.1);
             background-color: var(--primary-color);
+            color: white;
         }
     
-    
         @media(max-width: 768px){
-            .gallery{
+            .gallery {
                 flex-direction: column;
+            }
+            
+            .title {
+                font-size: 3rem;
+            }
+            
+            .project-title {
+                font-size: 1.8rem;
             }
         }
     </style>

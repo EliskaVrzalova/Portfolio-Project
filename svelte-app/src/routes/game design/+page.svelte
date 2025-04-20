@@ -1,39 +1,112 @@
 <script>
+    import { ImageViewer, PortfolioNav } from "$lib";
+    
     function scrollToTop() {
         window.scrollTo({
           top: 0,
           behavior: 'smooth'
         });
-      }
-    </script>
+    }
     
+    // Game design content organized by type
+    const playerDesigns = [
+        {
+            src: "/player1-design.png",
+            alt: "Design of player space rocket - variant 1",
+            description: "First variant of player spacecraft design."
+        },
+        {
+            src: "/player2-design.png",
+            alt: "Design of player space rocket - variant 2",
+            description: "Second variant of player spacecraft."
+        },
+        {
+            src: "/player3-design.png",
+            alt: "Design of player space rocket - variant 3",
+            description: "Third variant of player spacecraft."
+        }
+    ];
+    
+    const animationAssets = [
+        {
+            src: "/player idle.gif",
+            alt: "Player rocket idle animation",
+            description: "Player spacecraft idle animation showing subtle engine effects and stabilizer movements. The animation creates a sense of a ship hovering in space, ready for action."
+        },
+        {
+            src: "/enemy upgrade.gif",
+            alt: "Enemy upgrade animation sequence",
+            description: "Animation sequence showing an enemy spacecraft powering up. The transformation illustrates how enemies evolve during gameplay, presenting escalating challenges."
+        },
+        {
+            src: "/enemy shoot.gif",
+            alt: "Enemy attack animation",
+            description: "Enemy attack animation displaying weapon discharge and recoil effects."
+        }
+    ];
+    
+    const uiElements = [
+        {
+            src: "/menu.png",
+            alt: "Game menu design",
+            description: "Main menu interface design for space-themed game"
+        },
+        {
+            src: "/game-background.png",
+            alt: "In-game background environment",
+            description: "Space-themed game background. It creates depth and atmosphere while ensuring gameplay elements remain visually distinct."
+        }
+    ];
+</script>
+<div class="nav-container">
+    <PortfolioNav />
+</div>
     <div class="container">
         <h2 class="title">Game Design</h2>
+        
         <div class="gallery">
-            <div class="column">
-                <div class="picture">
-                    <img src="/player1-design.png" alt="design of player space rockets">
-                    <img src="/player2-design.png" alt="design of player space rockets">
-                    <img src="/player3-design.png" alt="design of player space rockets">
-                  
-                    <img src="/player idle.gif" alt="space rocket gifs">
-                    <img src="/enemy upgrade.gif" alt="space rocket gifs">
-                    <img src="/enemy shoot.gif" alt="space rocket gifs">
-                     
-                </div>
-            </div>
 
             <div class="column">
                 <div class="picture">
-                    <img src="/menu.png" alt="game menu design">
-                    <img src="/game-background.png" alt="game background">
-         
+                    {#each uiElements as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
+                </div>
+            </div>
+            <div class="column">
+                <div class="picture">
+                    {#each playerDesigns as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
+                </div>
+                <div class="picture">
+                    {#each animationAssets as image}
+                        <div class="image-wrapper">
+                            <ImageViewer 
+                                src={image.src} 
+                                alt={image.alt} 
+                                description={image.description} 
+                            />
+                        </div>
+                    {/each}
                 </div>
             </div>
         </div>
     </div>
     <div class="arrow-buttons">
-        <button class="up" on:click={scrollToTop()}>↑</button>
+        <button class="up" on:click={scrollToTop}>↑</button>
     </div>
     
     
@@ -60,26 +133,19 @@
             flex-direction: column;
             gap:20px;
         }
-    
-        .picture >img{
-            width:100%;
-            height: auto;
-            object-fit: cover;
+
+        .picture {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 20px;
+        }
+        
+        .image-wrapper {
+            width: 100%;
+            margin-bottom: 10px;
             border-radius: 5px;
-            transition: transform 0.5s ease, opacity 0.5s ease;
-        }
-    
-        /* Set up hover state for the gallery */
-        .gallery:hover .picture img {
-            opacity: 0.6; /* Reduce opacity of all images */
-            transform: scale(0.8); /* Slightly shrink all images */
-        }
-    
-        /* When a specific image is hovered, bring it back to full opacity and scale up */
-        .gallery .picture img:hover {
-            transform: scale(1.1);
-            opacity: 1; 
-            z-index: 1; 
+            overflow: hidden;
         }
         
         .arrow-buttons{
