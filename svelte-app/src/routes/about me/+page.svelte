@@ -6,10 +6,10 @@
         <h2>Who am I?</h2>
         <p>Hi! I'm Eliska, an aspiring designer with interest and passion in UI/ UX, animation, concept art and simply any other design you can think of:). <br>
             I always loved being creative- whether it's through drawing, problem-solving or dealing with challenges. Ever since I was a kid, I had design in my mind wondering and observing what it is and how people interact with it.</p>
-            <p>Beyond art and design, I'm very active and adventurous person. I love sports, exploring new places and pushing my limits. I do my best to translate the energy to my designs- i want the to feel dynamic, original and full of life.
+            <p>Beyond art and design, I'm very active and adventurous person. I love sports, exploring new places and pushing my limits. I do my best to translate the energy to my designs- i want them to feel dynamic, original and full of life.
                 I always look around and seek for inspiration because I myself want to become one for others. <br>
                 
-                Right now, I'm honing my skills, experimenting with different skills, and pushing myself to grow. This portfolio is a reflection of my ideas, creativity and passion for crafting original design that leave a lasting impact.<br>
+                Right now, I'm honing my skills, experimenting with different techniques, and pushing myself to grow. This portfolio is a reflection of my ideas, creativity and passion for crafting original design that leaves a lasting impact.<br>
                 
                 I hope you will enjoy the experience this website offers you and feel the message I'm sending you. <br>
                 <div class="signature">
@@ -98,4 +98,109 @@
     .SW-skills > img:hover {
         transform: scale(1.1); /* Adds hover effect */
     }
+
+    /*mobile*/
+    @media(max-width: 768px){
+        .about-me-container{
+            display:flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+            gap:1rem;
+            padding:1rem;
+        }
+
+        .image >img{
+        width:auto;
+        height:350px;
+    }
+        .image{
+            padding:0;
+            margin-bottom: -1rem;
+        }
+        .text h2{
+        font-size: 2rem;
+    }
+    .text {
+            padding: 1.3rem;
+            font-size: 1rem;
+            width:90vw;
+            margin-bottom: 2rem;
+    }
+    .signature >img{
+        width:auto;
+        height:100px;
+    }
+    .SW-skills >img{
+       width: auto;
+        height:50px;
+        padding:0.2rem;
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
+    .SW-skills{
+        gap: 0.5rem;
+        margin-left:0rem;
+        width:90vw;
+        padding-right: 1rem; /* Add padding to prevent icons from touching grid edge */
+        margin-top:-1rem;
+        padding-top:1rem;
+        padding-bottom: 0.5rem;
+        
+    }
+    }
+
+
+    /* Tablet devices */
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .about-me-container{
+            display:flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+            gap:1.5rem;
+            padding:2rem;
+        }
+
+        .image >img{
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+    }
+        .image{
+            padding:0;
+            margin-bottom: -1.5rem;
+        }
+        .text h2{
+        font-size: 2.5rem;
+    }
+    .text {
+            padding: 1.6rem;
+            font-size: 1.5rem;
+            width:90vw;
+            margin-bottom: 2rem;
+    }
+    .SW-skills >img{
+       width: auto;
+        height:70px;
+        padding:0.5rem;
+        transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
+    .signature >img{
+        width:auto;
+        height:120px;
+    }
+    .SW-skills{
+        gap: 0.8rem;
+        margin-left:0rem;
+        width:90vw;
+        padding-right: 1.5rem; /* Add padding to prevent icons from touching grid edge */
+        margin-top:-1rem;
+        padding-top:1rem;
+        padding-bottom: 0.5rem;
+        justify-content: center;
+        
+    }
+    }
+
+    
 </style>

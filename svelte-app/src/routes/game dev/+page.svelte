@@ -22,7 +22,7 @@
         },
         {
             title: "Kafka's Metamorphosis",
-            description: "An experimental narrative game inspired by Franz Kafka's novella. This project was done in the first year of my degree course in a team. For this project I took the role of concepr artist and designer",
+            description: "An experimental narrative game inspired by Franz Kafka's novella. This project was done in the first year of my degree course in a team. For this project I took the role of concept artist and designer",
             video: {
                 src: "/kafka.mp4",
                 poster: "/kafka-poster.jpg",
