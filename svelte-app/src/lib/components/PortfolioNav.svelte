@@ -14,12 +14,22 @@
 <style>
     nav {
     display: flex;  
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw); /* Ensure edge-to-edge width */
+    margin-right: calc(-50vw);
+    right: 0;
+    margin: 0;
+    padding: 0.5rem 0; /* Keep vertical padding, remove horizontal */
     justify-content: center; 
-    background-color:rgb(115, 54, 181, 0.5);          /* Makes nav flexible */
-    border: 2px solid var(--primary-color); 
-    padding: 0.5rem 2rem;       /* Spacing inside purple container */
-    border-radius: 25px;          /* Rounded corners */
+    background-color: rgb(115, 54, 181, 0.5);
+    border: 1px solid var(--primary-color);
+    border-radius: 0; 
     z-index: 10;
+    box-sizing: border-box; 
+    overflow-x: hidden;
 }
 
 
@@ -28,10 +38,13 @@ nav ul {
     padding: 0;
     display: flex;
     align-items: center;
-    margin:0;
-    gap: 4rem;
-    padding: 10px 5px;
-    
+    justify-content: center;
+    margin: 0;
+    gap: 4rem; 
+    padding: 10px 20px; 
+    flex-wrap: nowrap; 
+    max-width: 1200px; 
+    width: 100%; /* Full width */
 }
 nav ul li a{
         text-decoration: none;
@@ -81,14 +94,81 @@ nav ul li a{
     
         /*mobile*/
         @media(max-width: 768px){
+
             nav ul {
-                gap: 2rem;
-                padding: 5px 0px;
-    
+                gap: 1.5rem;
+                padding: 4px 20px; 
+                white-space: nowrap; 
+                justify-content: center;
+                width: auto; /* Allow content to determine width */
+                max-width: none; /* Remove max-width constraint in mobile */
             }
             nav ul li{
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
+            nav {
+            display: flex;  
+            justify-content: flex-start; /* Start alignment for better scrolling experience */
+            padding: 0.3rem 0;      
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            scroll-behavior: smooth; /* Smooth scrolling behavior */
+            scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox */
+            }
+            
+            /* Custom scrollbar styling for webkit browsers */
+            nav::-webkit-scrollbar {
+                height: 3px;
+            }
+            
+            nav::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            
+            nav::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 20px;
+            }
+            
+            
         }
+        /*tablet devices*/
+    @media (min-width: 769px) and (max-width: 1024px) {
+        nav ul {
+                gap: 2rem;
+                padding: 6px 25px; 
+                width:100%;
+                white-space: nowrap; 
+                justify-content: center;
+                width: auto; /* Allow content to determine width */
+                max-width: none; /* Remove max-width constraint in mobile */
+            }
+            nav ul li{
+                font-size: 1.4rem;
+            }
+            nav {
+            display: flex;  
+            justify-content: flex-start; /* Start alignment for better scrolling experience */
+            padding: 0.2rem 0;      
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            scroll-behavior: smooth; /* Smooth scrolling behavior */
+            scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox */
+            }
+            
+            /* Custom scrollbar styling for webkit browsers */
+            nav::-webkit-scrollbar {
+                height: 3px;
+            }
+            
+            nav::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            
+            nav::-webkit-scrollbar-thumb {
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 20px;
+            }
+    }
 
 </style>

@@ -192,5 +192,12 @@
     transform: scale(1.05);
     opacity: 1;
   }
+
+      /*mobile*/
+      @media(max-width: 768px){
+        .description p{
+          font-size: 0.8rem;
+        }
+      }
 </style>
 

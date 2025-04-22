@@ -184,16 +184,30 @@
         }
     
         @media(max-width: 768px){
-            .gallery {
+            .gallery{
                 flex-direction: column;
             }
-            
-            .title {
-                font-size: 3rem;
-            }
+            .title{
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .arrow-buttons {
+        bottom: 20px;
+        }
+    
+        .arrow-buttons button {
+        width: 45px;
+        height: 40px;
+        }
             
             .project-title {
                 font-size: 1.8rem;
+                text-align: center;
+            }
+            .project-description{
+                text-align: center;
             }
         }
+
     </style>

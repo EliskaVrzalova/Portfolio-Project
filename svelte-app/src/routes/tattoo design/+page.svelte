@@ -13,7 +13,7 @@
         {
             src: "/kenjaku.JPG",
             alt: "Tattoo design: Kenjaku, Jujutsu Kaisen",
-            description: "Custom tattoo design featuring Kenjaku from Jujutsu Kaisen. This intricate design captures the character's sinister essence through detailed linework and shading techniques ideal for body art."
+            description: "Custom tattoo design featuring Kenjaku from Jujutsu Kaisen. This design captures the character's sinister essence through detailed linework and shading techniques ideal for body art."
         },
         {
             src: "/dragon.png",
@@ -140,8 +140,22 @@
 
 
     @media(max-width: 768px){
-        .gallery{
-            flex-direction: column;
+            .gallery{
+                flex-direction: column;
+            }
+            .title{
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
         }
-    }
+        .arrow-buttons {
+        bottom: 20px;
+        }
+    
+        .arrow-buttons button {
+        width: 45px;
+        height: 40px;
+        }
+      
+        }
 </style>

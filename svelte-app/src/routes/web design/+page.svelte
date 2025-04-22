@@ -155,5 +155,27 @@
             .gallery{
                 flex-direction: column;
             }
+            .title{
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .second-title {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+                font-size: 1.2rem;
+            }
+        .arrow-buttons {
+        bottom: 20px;
+        }
+    
+        .arrow-buttons button {
+        width: 45px;
+        height: 40px;
+        }
+      
         }
     </style>

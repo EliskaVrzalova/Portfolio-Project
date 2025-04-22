@@ -174,5 +174,19 @@
             .gallery{
                 flex-direction: column;
             }
+            .title{
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .arrow-buttons {
+        bottom: 20px;
+        }
+    
+        .arrow-buttons button {
+        width: 45px;
+        height: 40px;
+        }
+      
         }
     </style>
