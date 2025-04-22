@@ -118,6 +118,9 @@
     font-size:1.3rem;
     border-bottom: 3px solid var(--primary-color);
 }
+.cv-grid > div h2{
+    font-size: 1.7rem;
+}
 .info {
 	grid-area: 1 / 1 / 1 / 2;
     margin-top: 20px;
@@ -171,4 +174,90 @@
     border-radius: 30px;
    
 }
+    /*mobile*/
+    @media(max-width: 768px){
+        .cv-grid {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	justify-content: center;
+    }
+    .cv-grid > div {
+    padding: 0.3rem 1rem;
+    }
+    .cv-grid > div p{
+        font-size: 1.1rem;
+    }
+.cv-grid > div h3{
+    font-size:1.1rem;
+    border-bottom: 2px solid var(--primary-color);
+    }
+    .image > img{
+    width:auto;
+    height:450px;
+    position: static; /* Reset the positioning */
+    left: auto; /* Reset left positioning */
+}
+.image {
+    display: flex;
+    justify-content: center; 
+    background-color: transparent;
+    margin: 0 auto; /* Center the container */
+    width: 100%; 
+}
+.skills p{
+    line-height: 2.2rem;
+}
+.references{
+    order:1;
+}
+.info, .skills{
+    background-color: var(--primary-color);
+}
+.info{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.profile{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--secondary-color);
+}
+.left-col {
+    display: none; /* Hide the left column completely */
+}
+    }
+/*tablet devices*/
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .cv-grid{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        .cv-grid > div {
+    padding: 0.5rem 1rem;
+    }
+    .cv-grid > div p{
+        font-size: 1.3rem;
+    }
+.cv-grid > div h3{
+    font-size:1.3rem;
+    border-bottom: 3px solid var(--primary-color);
+    }
+    .image > img{
+    width:auto;
+    height:500px;
+    margin-top:2rem;
+}
+.info p{
+    color:rgb(192, 192, 192);
+}
+.image {
+    display: flex;
+    justify-content: center; 
+    margin: 0 auto; /* Center the container */
+    width: 100%; 
+    z-index: -1;
+}
+    }
+
 </style>
