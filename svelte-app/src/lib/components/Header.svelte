@@ -61,13 +61,15 @@ header::after {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
         text-align: center;
-        padding-bottom: 1.8rem;
+        padding-bottom: 1.2rem;
     }
+ 
     
     .profile-picture {
-        justify-content: center;
+        justify-content: left;
+        width: 60px;
+        height: 60px;
     }
     
     header::after {

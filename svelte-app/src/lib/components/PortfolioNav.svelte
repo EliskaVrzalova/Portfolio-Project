@@ -79,4 +79,16 @@ nav ul li a{
         outline: none;
     }
     
+        /*mobile*/
+        @media(max-width: 768px){
+            nav ul {
+                gap: 2rem;
+                padding: 5px 0px;
+    
+            }
+            nav ul li{
+                font-size: 1rem;
+            }
+        }
+
 </style>
