@@ -640,4 +640,336 @@
     }
 
 
-</style>
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+        /* Hero section */
+        .hero-container {
+            margin-top: 4rem;
+            width:100%;
+            flex-direction: column;
+            height: auto;
+            padding: 1rem;
+            align-items: center;
+        }
+
+        .hero-text h1{
+        font-size:2rem;
+         }
+        .hero-text p{
+        font-size: 1.2rem;
+        }
+
+        .text-content {
+            padding: 1rem;
+            text-align: center;
+            order: 2;
+        }
+
+        .hero-image-container > img {
+           display:none;
+        }
+
+        .hero-text h1 {
+            font-size: 2rem;
+        }
+        /* Focus areas and socials */
+        .focus-areas, .socials {
+            width: 90%;
+            padding: 1rem;
+            margin: 0.5rem auto;
+        }
+        .focus-areas{
+            min-height:auto;
+        }
+
+        .icons-focus-areas {
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .socials{
+            margin-top: 4rem;
+            min-height: auto;
+        }
+        .icons-socials {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 2rem;
+            height: auto;
+            margin-top: 1rem;
+            justify-content: flex-start;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+        }
+        .icons-socials::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Edge */
+        }
+
+        .icons-socials img, .icons-focus-areas img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .text-socials h2 , .text-focus-areas h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+
+        .focus-item h3 {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .text-socials, .text-focus-areas {
+            font-size: 1.5rem;
+        }
+
+        /* Contact form */
+        .contact-me-grid {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+            width:100%;
+        }
+
+        .form-picture {
+            display: none;
+        }
+
+        .form-container {
+            padding: 0;
+        }
+
+        .form-row {
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-container h2 {
+            font-size: 1.5rem;
+        }
+        .submit-button{
+        font-size: 1.2rem;
+        padding:5px 10px 5px 10px;
+        border-radius:50px;
+        width:50%;
+        margin: 0.8rem auto;
+     
+    }
+
+
+        /* Modal */
+        .modal {
+            width: 90%;
+            height: auto;
+        }
+
+        .modal-content {
+            padding: 1rem;
+        }
+
+        /* Background shapes */
+        .shape1 {
+    width: 180px;
+    height: 180px;
+    top: 10%;
+    left: 30%;
+
+    }
+
+    .shape2 {
+        width: 180px;
+        height: 180px;
+        z-index: -1;
+        top: 60%;
+        right: 10%;
+    }
+
+    .shape3 {
+        width: 210px;
+        height: 210px;
+        top: 80%;
+        left: 10%;
+    }
+
+    .shape4 {
+        width: 200px;
+        height: 200px;
+        top: 35%;
+        left:20%;
+ 
+    }
+
+        .portfolio-button button {
+            padding: 15px 30px;
+            font-size: 1rem;
+        }
+
+          .focus-item h3 {
+            font-size: 1rem;
+        }
+        .butterflies{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .butterflies > img{
+      width:auto;
+      height:500px;
+       opacity: 0.7;
+    }
+    }
+
+     /* Tablet styles (between 769px and 1024px) */
+     @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .hero-container {
+           
+            margin: -4rem auto 0 auto; /* Negative margin to move it up */
+            width: 95%;
+            display: flex;
+            margin-bottom: 2rem;
+            flex-direction: column;
+            height: auto;
+            padding: 2rem 1rem;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text-content {
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 4rem;
+           
+        }
+
+        .hero-image-container > img {
+            display: none;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+        }
+        .focus-item h3 {
+            font-size: 1.2rem;
+            width:90%;
+        }
+        .focus-areas, .socials {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width: 90%;
+            padding: 1rem;
+            margin: 0.5rem auto;
+            height: auto;
+            min-height: auto;
+        }
+
+        .focus-areas {
+            margin-bottom: 0;
+        }
+
+        .socials {
+            margin-top: 0;
+            width:100%;
+        }
+
+        .icons-focus-areas {
+            flex-direction: row;
+            gap: 1.5rem;
+            padding: 0.5rem;
+            justify-content: center;
+            margin: 0;
+            height: auto;
+        }
+
+        .icons-socials {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+            height: auto;
+            margin: 0;
+            justify-content: center;
+            padding: 0.5rem;
+        }
+
+        .icons-socials img, 
+        .icons-focus-areas img {
+            width: 120px;
+            height: 120px;
+        }
+
+        .text-socials, 
+        .text-focus-areas {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-me-grid {
+            grid-template-columns: 1fr 1fr;
+            padding: 1rem;
+            align-items: center;
+            justify-content: center;
+                }
+
+        .form-picture {
+            display: flex;
+        }
+
+        .form-picture > img {
+            width: 250px;
+            height: auto;
+        }
+        .form-container h2 {
+            font-size: 1.8rem;
+        }
+
+        .butterflies{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .butterflies > img{
+      width:auto;
+      height:800px;
+       opacity: 0.7;
+    }
+    .shape1 {
+    width: 250px;
+    height: 250px;
+    top: 10%;
+    left: 10%;
+
+    }
+
+    .shape2 {
+        width: 230px;
+        height: 230px;
+        z-index: -1;
+        top: 40%;
+        right: 10%;
+    }
+
+    .shape3 {
+        width: 210px;
+        height: 210px;
+        top: 50%;
+        left: 10%;
+    }
+
+    .shape4 {
+        width: 250px;
+        height: 250px;
+        top: 15%;
+        right:30%;
+        z-index: -1;
+ 
+    }
+    }
+    </style>
