@@ -55,7 +55,7 @@
 <style>
   footer {
     background-color: rgb(255, 255, 255,0.5);
-    color: #333;
+    color: #000000;
     padding: 3rem 1rem;
     margin-top: 4rem;
     border-top: 1px solid #eaeaea;
@@ -89,7 +89,7 @@
     left: 0;
     width: 40px;
     height: 2px;
-    background-color: #666;
+    background-color: #000000;
   }
 
   /* Quick Links Styling */
@@ -104,14 +104,14 @@
   }
 
   .quick-links a {
-    color: #555;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
   }
   /*links change color and move to the right a bit*/
   .quick-links a:hover {
-    color: #000;
+    color: var(--primary-color);
     transform: translateX(5px);
   }
 
@@ -158,7 +158,7 @@
   }
 
   .email-link {
-    color: #555;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
     margin-bottom: 1.5rem;
@@ -166,7 +166,7 @@
   }
 
   .email-link:hover {
-    color: #000;
+    color: var(--primary-color);
   }
 
   .copyright {

@@ -4,7 +4,7 @@
     import { page } from "$app/stores";
     
     // Check if current page is the portfolio page
-    $: isPortfolioPage = $page.url.pathname === "/portfolio" || $page.url.pathname === "/portfolio/";
+    $: isPortfolioPage = $page.url.pathname.startsWith("/portfolio");
     </script>
     <!-- Header -->
     <Header />
