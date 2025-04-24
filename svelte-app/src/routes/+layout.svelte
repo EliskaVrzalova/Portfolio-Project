@@ -24,4 +24,21 @@
     padding: 2rem;
     text-align: left;
     }
+    
+    .skip-to-main {
+      position: absolute;
+      left: -9999px;
+      z-index: 999;
+      padding: 1em;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .skip-to-main:focus {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+    }
     </style>

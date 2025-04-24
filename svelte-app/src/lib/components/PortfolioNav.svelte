@@ -1,14 +1,14 @@
 <script>
     import { page } from '$app/stores';
 </script>
-<nav>
-    <ul>
-        <li><a href="/game design" data-text="Game Design" class={$page.url.pathname === '/game%20design' ? 'active' : ''}>Game Design</a></li>
-        <li><a href="/game dev" data-text="Game Development" class={$page.url.pathname ===  '/game%20dev' ? 'active' : ''}>Game Development</a></li>
-        <li><a href="/digital art" data-text="Digital Art" class={$page.url.pathname === '/digital%20art' ? 'active' : ''}>Digital Art</a></li>
-        <li><a href="/tattoo design" data-text="Tattoo Design" class={$page.url.pathname === '/tattoo%20design' ? 'active' : ''}>Tattoo Design</a></li>
-        <li><a href="/paintings" data-text="Paintings" class={$page.url.pathname === '/paintings' ? 'active' : ''}>Paintings</a></li>
-        <li><a href="/web design" data-text="Web Design" class={$page.url.pathname === '/web%20design' ? 'active' : ''}>Web Design</a></li>
+<nav role="navigation" aria-label="Portfolio categories">
+    <ul role="menubar">
+        <li role="none"><a href="/game design" data-text="Game Design" class={$page.url.pathname === '/game%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/game%20design' ? 'page' : undefined}>Game Design</a></li>
+        <li role="none"><a href="/game dev" data-text="Game Development" class={$page.url.pathname ===  '/game%20dev' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/game%20dev' ? 'page' : undefined}>Game Development</a></li>
+        <li role="none"><a href="/digital art" data-text="Digital Art" class={$page.url.pathname === '/digital%20art' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/digital%20art' ? 'page' : undefined}>Digital Art</a></li>
+        <li role="none"><a href="/tattoo design" data-text="Tattoo Design" class={$page.url.pathname === '/tattoo%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/tattoo%20design' ? 'page' : undefined}>Tattoo Design</a></li>
+        <li role="none"><a href="/paintings" data-text="Paintings" class={$page.url.pathname === '/paintings' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/paintings' ? 'page' : undefined}>Paintings</a></li>
+        <li role="none"><a href="/web design" data-text="Web Design" class={$page.url.pathname === '/web%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/web%20design' ? 'page' : undefined}>Web Design</a></li>
     </ul>
 </nav>
 <style>
@@ -86,12 +86,14 @@ nav ul li a{
     }
     
     /* Focus state */
+    /* Focus state */
     nav ul li a:focus {
         color: white;
         text-decoration: none;
-        outline: none;
+        outline: 2px solid white;
+        outline-offset: 2px;
+        border-radius: 4px;
     }
-    
         /*mobile*/
         @media(max-width: 768px){
 

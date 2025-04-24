@@ -3,11 +3,11 @@
   const currentYear = new Date().getFullYear();
 </script>
 
-<footer>
+<footer role="contentinfo">
   <div class="footer-container">
     <!-- Quick links section -->
-    <div class="footer-section">
-      <h3>Portfolio</h3>
+    <div class="footer-section" role="navigation" aria-labelledby="portfolio-nav">
+      <h3 id="portfolio-nav">Portfolio</h3>
       <ul class="quick-links">
         <li><a href="/digital-art">Digital Art</a></li>
         <li><a href="/paintings">Paintings</a></li>
@@ -20,32 +20,37 @@
 
     <!-- Social media section with image links -->
     <div class="footer-section social-section">
-      <h3>Connect With Me</h3>
-      <div class="social-links">
-        <a href="https://www.instagram.com/_evrzlv_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
-          <img src="/instagram.png" alt="Instagram" class="social-icon" />
+      <h3 id="social-links">Connect With Me</h3>
+      <div class="social-links" aria-labelledby="social-links">
+        <a href="https://www.instagram.com/_evrzlv_/" target="_blank" rel="noopener noreferrer" aria-label="Follow me on Instagram">
+          <img src="/instagram.png" alt="" class="social-icon" aria-hidden="true" />
+          <span class="visually-hidden">Instagram</span>
         </a>
-        <a href="https://github.com/EliskaVrzalova" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-          <img src="/github.png" alt="GitHub" class="social-icon" />
+        <a href="https://github.com/EliskaVrzalova" target="_blank" rel="noopener noreferrer" aria-label="View my projects on GitHub">
+          <img src="/github.png" alt="" class="social-icon" aria-hidden="true" />
+          <span class="visually-hidden">GitHub</span>
         </a>
-        <a href="https://discord.com/users/1332386471621165226" target="_blank" rel="noopener noreferrer" aria-label="Discord Profile">
-          <img src="/discord.png" alt="Discord" class="social-icon" />
+        <a href="https://discord.com/users/1332386471621165226" target="_blank" rel="noopener noreferrer" aria-label="Contact me on Discord">
+          <img src="/discord.png" alt="" class="social-icon" aria-hidden="true" />
+          <span class="visually-hidden">Discord</span>
         </a>
-        <a href="https://x.com/vrzalova_eliska" target="_blank" rel="noopener noreferrer" aria-label="Twitter Profile">
-          <img src="/twitter.png" alt="Twitter" class="social-icon" />
+        <a href="https://x.com/vrzalova_eliska" target="_blank" rel="noopener noreferrer" aria-label="Follow me on X (formerly Twitter)">
+          <img src="/twitter.png" alt="" class="social-icon" aria-hidden="true" />
+          <span class="visually-hidden">X (Twitter)</span>
         </a>
-        <a href="mailto:eliska.vrzalovaa@gmail.com" aria-label="Email Me">
-          <img src="/gmail-logo.png" alt="Email" class="social-icon" />
+        <a href="mailto:eliska.vrzalovaa@gmail.com" aria-label="Send me an email">
+          <img src="/gmail-logo.png" alt="" class="social-icon" aria-hidden="true" />
+          <span class="visually-hidden">Email</span>
         </a>
       </div>
     </div>
 
     <!-- Copyright section -->
     <div class="footer-section">
-      <h3>Contact</h3>
+      <h3 id="contact-info">Contact</h3>
       <p>Feel free to reach out for collaborations, inquiries, or just to say hello!</p>
-      <a href="mailto:your.email@example.com" class="email-link">eliska.vrzalovaa@gmail.com</a>
-      <div class="copyright">
+      <a href="mailto:eliska.vrzalovaa@gmail.com" class="email-link" aria-labelledby="contact-info">eliska.vrzalovaa@gmail.com</a>
+      <div class="copyright" role="contentinfo">
         <p>&copy; {currentYear} Eliska Vrzalova. All rights reserved.</p>
       </div>
     </div>
@@ -53,6 +58,7 @@
 </footer>
 
 <style>
+  
   footer {
     background-color: rgb(255, 255, 255,0.5);
     color: #000000;

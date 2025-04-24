@@ -57,7 +57,7 @@
     </div>
   
     <div class="hero-image-container">
-        <img src="/hero.png" alt="homepage hero image" id="hero">
+        <img src="/hero.png" alt="homepage hero" id="hero">
     </div>
 </div>
 <div class="divider"></div>

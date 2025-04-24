@@ -98,8 +98,8 @@
     
 </div>
 <div class="arrow-buttons">
-    <button class="previous">←</button>
-    <button class="next">→</button>
+    <button class="previous" aria-label="Previous project">←</button>
+    <button class="next" aria-label="Next project">→</button>
 </div>
 
 <style>
