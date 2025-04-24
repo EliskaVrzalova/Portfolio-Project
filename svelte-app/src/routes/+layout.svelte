@@ -1,6 +1,10 @@
 <script>
     //Import components
     import { Header, Footer } from "$lib";
+    import { page } from "$app/stores";
+    
+    // Check if current page is the portfolio page
+    $: isPortfolioPage = $page.url.pathname === "/portfolio" || $page.url.pathname === "/portfolio/";
     </script>
     <!-- Header -->
     <Header />
@@ -11,7 +15,10 @@
     </main>
 
     <!-- Footer --> 
-    <Footer />
+       <!-- Footer (hidden on portfolio page) --> 
+       {#if !isPortfolioPage}
+       <Footer />
+   {/if}
     <style>
     main {
     padding: 2rem;

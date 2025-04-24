@@ -85,20 +85,25 @@
     <h2>Find me on:</h2>
 </div>
 <div class="icons-socials">
-    <img src="/instagram.png" alt="instagram logo">
-    <img src="/github.png" alt="instagram logo">
-    <img src="/discord.png" alt="instagram logo">
-    <img src="/twitter.png" alt="instagram logo">
-    <img src="/gmail-logo.png" alt="instagram logo">
+    <a href="https://www.instagram.com/_evrzlv_/" target="_blank" rel="noopener noreferrer">
+    <img src="/instagram.png" alt="instagram logo"></a>
+    <a href="https://github.com/EliskaVrzalova" target="_blank" rel="noopener noreferrer">
+    <img src="/github.png" alt="Github logo"></a>
+    <a href="https://discord.com/users/1332386471621165226" target="_blank" rel="noopener noreferrer">
+    <img src="/discord.png" alt="Discord logo"></a>
+    <a href="https://x.com/vrzalova_eliska" target="_blank" rel="noopener noreferrer">
+    <img src="/twitter.png" alt="X (Twitter) logo"></a>
+    <a href="mailto:eliska.vrzalovaa@gmail.com">
+    <img src="/gmail-logo.png" alt="G-mail logo"></a>
 </div>
 </div>
 <div class="bottom-container">
 <div class="butterflies">
-    <img src="/butterflies.png" alt="flock of butterflies image">
+    <img src="/butterflies.png" alt="flock of butterflies">
 </div>
 <div class="contact-me-grid">
 <div class="form-picture">
-    <img src="/contactPic.png" alt="picture of Eliska next to the contact form">
+    <img src="/contactPic.png" alt="Eliska next to the contact form">
 </div>
 <div class="form-container">
     <form on:submit={handleSubmit} class="contact-form">
