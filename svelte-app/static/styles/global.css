@@ -14,7 +14,11 @@
     /* Font Variables */
     --font-family: "DynaPuff", serif;
     --font-size-base: 20px;
-    --font-size-heading: clamp(2rem, 2.5vw, 3.5rem);
+    --font-size-base-smaller:15px;
+    --font-size-h1: clamp(2rem, 5vw, 3.8rem);
+    --font-size-h2: clamp(1.5rem, 4vw, 2.5rem);
+    --font-size-h3: clamp(1rem, 3vw, 1.8rem);
+    --font-size-heading: clamp(2rem, 2.5vw, 3.5rem); 
     --line-height-base: 1.6;
 
     /* Spacing Variables */
@@ -52,7 +56,15 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: var(--spacing-small);
 }
 h1{
-    font-size: var(--font-size-heading);
+    font-size: var(--font-size-h1);
+}
+
+h2{
+    font-size: var(--font-size-h2);
+}
+
+h3{
+    font-size: var(--font-size-h3);
 }
 
 /* ==============================

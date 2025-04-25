@@ -85,7 +85,7 @@ nav ul li a{
         width: 100%;
     }
     
-    /* Focus state */
+ 
     /* Focus state */
     nav ul li a:focus {
         color: white;
@@ -106,7 +106,7 @@ nav ul li a{
                 max-width: none; /* Remove max-width constraint in mobile */
             }
             nav ul li{
-                font-size: 0.8rem;
+                font-size: var(--font-size-base-smaller);
             }
             nav {
             display: flex;  
@@ -146,7 +146,7 @@ nav ul li a{
                 max-width: none; /* Remove max-width constraint in mobile */
             }
             nav ul li{
-                font-size: 1.4rem;
+                font-size: var(--font-size-base);
             }
             nav {
             display: flex;  

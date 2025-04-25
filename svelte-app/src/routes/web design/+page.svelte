@@ -38,8 +38,8 @@
     <PortfolioNav />
 </div>
     <div class="container">
-        <h2 class="title">Web Design</h2>
-        <h3 class="second-title">Team project: website focused on movies</h3>
+        <h1 class="title">Web Design</h1>
+        <h2 class="second-title">Team project: website focused on movies</h2>
         <p>In this project done in the second year of my Bachelor's degree I took part in the overall design. Later in the development phase I was in charge of the homepage design, theatre movies pages design and the content suggestions page design.</p>
         
         <div class="gallery">
@@ -83,12 +83,11 @@
         .title{
             margin-bottom: 4rem;
             text-align: center;
-            font-size: 4rem;
         }
         p{
             text-align: center;
             margin-bottom: 4rem;
-            font-size: 1.5rem;
+            font-size: var(--font-size-base);
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
@@ -96,7 +95,6 @@
         }
         .second-title{
             text-align: center;
-            font-size: 2.2rem;
             color: var(--primary-color);
             margin: 0;
         }
@@ -158,10 +156,8 @@
             .title{
             margin-bottom: 2rem;
             text-align: center;
-            font-size: 2rem;
         }
         .second-title {
-                font-size: 1.8rem;
                 text-align: center;
             }
             p{

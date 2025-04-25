@@ -155,9 +155,7 @@
 </div>
 {/if}
 <style>
-    .hero-text h1{
-        font-size:3rem;
-    }
+  
     .hero-text p{
         font-size: 1.8rem;
     }
@@ -167,8 +165,8 @@
     }
  
    .hero-container{
-   width:100vw;
-   height:100vh;
+    width:100vw;
+    height:100vh;
     padding:1rem;
     margin:0;
     display:flex;
@@ -212,11 +210,11 @@
     transition: transform 0.3s ease; /*for scaling to be smooth*/
    }
    .portfolio-button button:after {
-  content: '>>';
-  position: absolute;
-  margin-left: 5px;
-  transition: 0.5s; /*for opacity trasition when the arrow appears*/
-  opacity: 0;
+    content: '>>';
+    position: absolute;
+    margin-left: 5px;
+    transition: 0.5s; /*for opacity trasition when the arrow appears*/
+    opacity: 0;
 
 }
 .portfolio-button::before {
@@ -356,7 +354,6 @@
 .text-socials,
  .text-focus-areas{
     text-align: center; 
-    font-size:2rem;
     margin-bottom: 2rem;
 }
 .icons-socials,
@@ -373,6 +370,7 @@
 }
 .icons-focus-areas{
     gap:4rem;
+    
 }
 
 .focus-item {
@@ -381,13 +379,20 @@
     align-items: center;
     text-align: center;
     transition: transform 0.5s ease;
+    width:200px;
 }
 
 .focus-item h3 {
     margin-top: 1rem;
-    font-size: 1.5rem;
     color: var(--text-color);
     transition: opacity 0.5s ease;
+    width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
+    min-height: 3.6rem; /* Accommodates two lines of text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .icons-socials img,
@@ -399,7 +404,6 @@
     object-fit: contain; /* Maintain aspect ratio */
 }
 
-/* When the parent container is hovered, fade all icons slightly */
 /* When the parent container is hovered, fade all icons slightly */
 .icons-socials:hover img {
     opacity: 0.6; /* Reduce opacity of all icons */
@@ -466,7 +470,7 @@
         border: 1px solid rgb(255, 255, 255, 0.7);
         background: rgb(157, 45, 198,0.2);
         color: white;
-        font-size: 1rem;
+        font-size:var(--font-size-base);
         transition: all 0.3s ease;
         box-shadow: 0 2px 5px rgb(157, 45, 198);
     }
@@ -478,11 +482,12 @@
     label{
         margin-bottom:0.25rem;
         margin-top:0.25rem;
+        font-size: var(--font-size-base);
     }
     .submit-button{
         position:relative;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: var(--font-size-base);
         font-family:"DynaPuff", serif;
         padding:10px 20px 10px 20px;
         border-radius:50px;
@@ -540,10 +545,10 @@
     }
 
     .form-picture > img{
-        width: 280px;
-        height: 450px;
+        width: 300px;
+        height: 500px;
         margin-right: -5px; /* Increased negative margin to move image closer to form */
-        margin-bottom: 40px;
+        
     }
 
     .form-container {
@@ -573,7 +578,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 500px;
-        height: 250px;
+        height: 350px;
         border-radius: 50px;
         background:var(--primary-color);
         border: solid 3px white;
@@ -611,7 +616,7 @@
     }
 
     .modal-content {
-        padding: 2rem;
+        padding: 4rem;
         text-align: center;
         border-radius: 15px;
         max-width: 500px;
@@ -657,9 +662,6 @@
             align-items: center;
         }
 
-        .hero-text h1{
-        font-size:2rem;
-         }
         .hero-text p{
         font-size: 1.2rem;
         }
@@ -674,9 +676,6 @@
            display:none;
         }
 
-        .hero-text h1 {
-            font-size: 2rem;
-        }
         /* Focus areas and socials */
         .focus-areas, .socials {
             width: 90%;
@@ -717,19 +716,14 @@
         }
 
         .text-socials h2 , .text-focus-areas h2 {
-            font-size: 1.8rem;
             margin-bottom: 0.5rem;
         }
         
 
         .focus-item h3 {
-            font-size: 1.2rem;
             margin-top: 0.5rem;
         }
 
-        .text-socials, .text-focus-areas {
-            font-size: 1.5rem;
-        }
 
         /* Contact form */
         .contact-me-grid {
@@ -753,9 +747,7 @@
             gap: 1rem;
         }
 
-        .form-container h2 {
-            font-size: 1.5rem;
-        }
+     
         .submit-button{
         font-size: 1.2rem;
         padding:5px 10px 5px 10px;
@@ -813,18 +805,15 @@
             font-size: 1rem;
         }
 
-          .focus-item h3 {
-            font-size: 1rem;
-        }
         .butterflies{
             display: flex;
             justify-content: center;
             align-items: center;
         }
         .butterflies > img{
-      width:auto;
-      height:500px;
-       opacity: 0.7;
+        width:auto;
+        height:500px;
+        opacity: 0.7;
     }
     }
 
@@ -854,15 +843,10 @@
             display: none;
         }
 
-        .hero-text h1 {
-            font-size: 3rem;
-        }
-
         .hero-text p {
             font-size: 1.5rem;
         }
         .focus-item h3 {
-            font-size: 1.2rem;
             width:90%;
         }
         .focus-areas, .socials {
@@ -912,7 +896,6 @@
 
         .text-socials, 
         .text-focus-areas {
-            font-size: 1.5rem;
             margin-bottom: 0.5rem;
         }
 
@@ -931,9 +914,7 @@
             width: 250px;
             height: auto;
         }
-        .form-container h2 {
-            font-size: 1.8rem;
-        }
+   
 
         .butterflies{
             display: flex;

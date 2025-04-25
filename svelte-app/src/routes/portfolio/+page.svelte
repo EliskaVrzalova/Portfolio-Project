@@ -172,7 +172,7 @@
         height:400px;
         text-align: left;
         color:white;
-        background-color: rgb(115, 54, 181,0.7);
+        background-color: rgb(115, 54, 181,0.8);
         border-radius: 30px;
         box-shadow: 0 7px 15px rgb(255, 255, 255,0.5);
         padding:10px 30px;
@@ -187,7 +187,7 @@
 
 
     .text .title{
-        font-size: 2.3rem;
+        font-size:var(--font-size-h2);
         font-weight: bold;
         opacity:0;
         animation: reveal 1s ease-in-out 1 forwards;
@@ -195,7 +195,7 @@
     }
 
     .text .description{
-        font-size:1rem;
+        font-size:var(--font-size-base);
         margin-top: 30px;
         margin-bottom: 20px;
         opacity:0;
@@ -211,7 +211,7 @@
         transition: all .4s ease-in-out;
         background-color: #ffffff;
         overflow: hidden;
-        font-size: 1.2rem;
+        font-size: var(--font-size-base);
         font-family:"DynaPuff", serif;
         padding:10px 20px 10px 20px;
         border-radius:50px;
@@ -300,12 +300,11 @@
     }
     
     .text .title{
-        font-size: 2rem;
         margin-top: 5px;
     }
 
     .text .description{
-        font-size:1rem;
+        font-size:var(--font-size-base-smaller);
         line-height: 1.5rem;
         margin-top: 15px;
         margin-bottom: 10px;
@@ -387,12 +386,10 @@
     }
     
     .text .title{
-        font-size: 3rem;
         margin-top: 10px;
     }
 
     .text .description{
-        font-size:1.5rem;
         line-height: 2.5rem;
         margin-top: 20px;
         margin-bottom: 15px;
@@ -400,7 +397,7 @@
     .text button {
         margin-top: 25px;
         padding: 10px 18px;
-        font-size: 1.5rem;
+        font-size:var(--font-size-base);
     }
     @keyframes reveal{
         from{

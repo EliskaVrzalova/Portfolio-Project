@@ -115,12 +115,13 @@
     padding: 0.5rem 2rem;
 }
 .cv-grid > div h3{
-    font-size:1.3rem;
+
     border-bottom: 3px solid var(--primary-color);
 }
-.cv-grid > div h2{
-    font-size: 1.7rem;
+.cv-grid > div p{
+    font-size:var(--font-size-base);
 }
+
 .info {
 	grid-area: 1 / 1 / 1 / 2;
     margin-top: 20px;
@@ -189,21 +190,14 @@
         font-size: 1.1rem;
     }
 .cv-grid > div h3{
-    font-size:1.1rem;
     border-bottom: 2px solid var(--primary-color);
     }
     .image > img{
-    width:auto;
-    height:450px;
-    position: static; /* Reset the positioning */
-    left: auto; /* Reset left positioning */
+display: none;
 }
 .image {
-    display: flex;
-    justify-content: center; 
-    background-color: transparent;
-    margin: 0 auto; /* Center the container */
-    width: 100%; 
+    display: none;
+    
 }
 .skills p{
     line-height: 2.2rem;
@@ -237,10 +231,10 @@
     padding: 0.5rem 1rem;
     }
     .cv-grid > div p{
-        font-size: 1.3rem;
+        font-size:var(--font-size-base);
     }
 .cv-grid > div h3{
-    font-size:1.3rem;
+
     border-bottom: 3px solid var(--primary-color);
     }
     .image > img{
@@ -253,7 +247,7 @@
 }
 .image {
     display: flex;
-    justify-content: center; 
+    justify-content: flex-end; 
     margin: 0 auto; /* Center the container */
     width: 100%; 
     z-index: -1;

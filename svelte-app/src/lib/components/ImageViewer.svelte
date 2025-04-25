@@ -179,7 +179,7 @@
   
   .description p {
     margin: 0;
-    font-size: 1.1rem;
+    font-size:var(--font-size-base-smaller);
     line-height: 1.5;
   }
   

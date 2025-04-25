@@ -288,7 +288,7 @@
         .mobile-menu ul li a {
     display: inline-block;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size:var(--font-size-base);
     font-weight: bold;
     padding: 1rem 0;
     position: relative;
@@ -343,7 +343,7 @@
             }
             
             .mobile-menu ul li a {
-                font-size: 1.3rem;
+                font-size:var(--font-size-base-smaller);
                 padding: 0.8rem 0;
             }
         }

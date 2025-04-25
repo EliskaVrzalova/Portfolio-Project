@@ -39,7 +39,7 @@
     <PortfolioNav />
 </div>
     <div class="container">
-        <h2 class="title">Paintings</h2>
+        <h1 class="title">Paintings</h1>
         <div class="gallery">
             <div class="column">
                 <div class="picture">
@@ -85,7 +85,6 @@
         .title{
             margin-bottom: 4rem;
             text-align: center;
-            font-size: 4rem;
         }
         .gallery{
             display:flex;
@@ -141,7 +140,6 @@
             .title{
             margin-bottom: 2rem;
             text-align: center;
-            font-size: 2rem;
         }
         .arrow-buttons {
         bottom: 20px;

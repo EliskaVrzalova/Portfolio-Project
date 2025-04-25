@@ -45,7 +45,7 @@
     <PortfolioNav />
 </div>
     <div class="container">
-        <h2 class="title">Game Development</h2>
+        <h1 class="title">Game Development</h1>
         
         <div class="gallery">
             <div class="column">
@@ -118,7 +118,6 @@
         .title{
             margin-bottom: 2rem;
             text-align: center;
-            font-size: 4rem;
         }
         
         
@@ -142,13 +141,12 @@
         }
         
         .project-title {
-            font-size: 2.2rem;
             color: var(--primary-color);
             margin: 0;
         }
         
         .project-description {
-            font-size: 1.2rem;
+            font-size: var(--font-size-base);
             line-height: 1.6;
             margin: 0 0 1rem;
         }
@@ -190,7 +188,6 @@
             .title{
             margin-bottom: 2rem;
             text-align: center;
-            font-size: 2rem;
         }
         .arrow-buttons {
         bottom: 20px;
@@ -199,10 +196,8 @@
         .arrow-buttons button {
         width: 45px;
         height: 40px;
-        }
-            
+        }   
             .project-title {
-                font-size: 1.8rem;
                 text-align: center;
             }
             .project-description{

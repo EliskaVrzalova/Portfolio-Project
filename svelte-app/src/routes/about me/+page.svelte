@@ -1,6 +1,6 @@
 <div class="about-me-container">
     <div class="image">
-        <img src="/aboutme.png" alt="picture of Eliska">
+        <img src="/aboutme.png" alt="Eliska">
     </div>
     <div class="text">
         <h2>Who am I?</h2>
@@ -43,7 +43,7 @@
     }
     .image >img{
         width:auto;
-        height:600px;
+        height:700px;
         object-fit: contain;
     }
     .image{
@@ -62,16 +62,13 @@
         background-color: rgb(255, 255, 255,0.2);
         padding:2rem;
         border-radius: 30px;
-        font-size: 1rem;
+        font-size: var(--font-size-base);
     }
     .signature >img{
         width:auto;
         height:150px;
     }
-    .text h2{
-        font-size: 3rem;
-    }
-  
+
     .SW-skills{
         grid-area: 2/1/2/1;
         display: flex;
@@ -81,6 +78,7 @@
         margin-left:3rem;
         align-items: center;
         width:90%;
+        height: 300px;
         padding-right: 2rem; /* Add padding to prevent icons from touching grid edge */
         margin-top:-2rem;
         border:solid 1px white;
@@ -91,7 +89,7 @@
     }
     .SW-skills >img{
        width: auto;
-        height:65px;
+        height:75px;
         padding:0.2rem;
         transition: transform 0.3s ease; /* Smooth transition for hover effect */
     }
@@ -108,23 +106,16 @@
            align-items: center;
             gap:1rem;
             padding:1rem;
+            margin-top: -4rem;
         }
 
         .image >img{
-        width:auto;
-        height:350px;
-    }
-        .image{
-            padding:0;
-            margin-bottom: -1rem;
-        }
-        .text h2{
-        font-size: 2rem;
+      display: none;
     }
     .text {
             padding: 1.3rem;
             font-size: 1rem;
-            width:90vw;
+            width:95vw;
             margin-bottom: 2rem;
     }
     .signature >img{
@@ -133,7 +124,7 @@
     }
     .SW-skills >img{
        width: auto;
-        height:50px;
+        height:55px;
         padding:0.2rem;
         transition: transform 0.3s ease; /* Smooth transition for hover effect */
     }
@@ -170,9 +161,6 @@
             padding:0;
             margin-bottom: -1.5rem;
         }
-        .text h2{
-        font-size: 2.5rem;
-    }
     .text {
             padding: 1.6rem;
             font-size: 1.5rem;
