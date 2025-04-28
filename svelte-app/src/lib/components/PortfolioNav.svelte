@@ -18,7 +18,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100vw; /* Full viewport width */
-    margin-left: calc(-50vw); /* Ensure edge-to-edge width */
+    margin-left: calc(-50vw); /* Ensure edge-to-edge width, wide enough I dont see the edges */
     margin-right: calc(-50vw);
     right: 0;
     margin: 0;
@@ -46,6 +46,7 @@ nav ul {
     max-width: 1200px; 
     width: 100%; /* Full width */
 }
+/*links styled the same as the main navigation */
 nav ul li a{
         text-decoration: none;
         color: rgb(209, 204, 204);

@@ -9,13 +9,14 @@
     }
     
     // Website content organized by sections
+    //video
     const videoContent = {
         src: "/homepage.mp4",
         poster: "/homepage.jpg",
         alt: "Website homepage interaction video",
         description: "Interactive demonstration of the movie website homepage. This video showcases the responsive navigation, and dynamic content that creates an engaging user experience."
     };
-    
+    //images
     const websiteScreenshots = [
         {
             src: "/nosignal-homepage.png",
@@ -39,9 +40,10 @@
 </div>
     <div class="container">
         <h1 class="title">Web Design</h1>
+        <!--decription of the website project-->
         <h2 class="second-title">Team project: website focused on movies</h2>
         <p>In this project done in the second year of my Bachelor's degree I took part in the overall design. Later in the development phase I was in charge of the homepage design, theatre movies pages design and the content suggestions page design.</p>
-        
+        <!--only one column layout-->
         <div class="gallery">
             <div class="column">
                 <div class="video-wrapper">
@@ -67,6 +69,7 @@
             </div>
         </div>
     </div>
+      <!--button that return to the top of the page-->
     <div class="arrow-buttons">
         <button class="up" on:click={scrollToTop}>↑</button>
     </div>
@@ -150,6 +153,7 @@
     
     
         @media(max-width: 768px){
+            /*one column layout and centered titles and description*/
             .gallery{
                 flex-direction: column;
             }

@@ -6,7 +6,7 @@
 
 
 <header>
-    <!-- Logo -->
+    <!-- Profile picture icon as homepage link -->
     <a href="/" class="home-link">
         <div class="profile-picture"></div></a>
     <Navigation />
@@ -23,7 +23,7 @@ header {
     margin-right: 1rem;
     align-items: center;
 }
-
+/*divider*/
 header::after {
     content: '';
     position: absolute;
@@ -54,11 +54,12 @@ header::after {
     color: inherit;
     display: inline-block;
 }
-
+/*profile picture icon gets slightly bigger when hovered*/
 .home-link:hover .profile-picture {
     transform: scale(1.1);
 }
-
+/*responsive design*/
+/*mobile devices*/
 @media (max-width: 768px) {
     header {
         text-align: center;

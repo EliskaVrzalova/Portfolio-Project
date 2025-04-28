@@ -1,6 +1,6 @@
 <script>
     import { ImageViewer, PortfolioNav } from "$lib";
-    
+    //button at the end of the page allowing user to return back to the top without having to scroll
     function scrollToTop() {
         window.scrollTo({
           top: 0,
@@ -9,6 +9,7 @@
     }
     
     // Image data with descriptions
+    // two columns
     const column1Images = [
         {
             src: "/oldmansketch.png",
@@ -45,11 +46,14 @@
         }
     ];
 </script>
+<!--import portfolio navigation component-->
 <div class="nav-container">
     <PortfolioNav />
 </div>
+
     <div class="container">
         <h1 class="title">Digital Art</h1>
+        <!--each image is part of gallery, in one of the columns with ImageViewer imported allowing images to expand and reveal their description-->
         <div class="gallery">
             <div class="column">
                 <div class="picture">
@@ -79,6 +83,7 @@
             </div>
         </div>
     </div>
+    <!--button that return to the top of the page-->
     <div class="arrow-buttons">
         <button class="up" on:click={scrollToTop}>↑</button>
     </div>
@@ -96,6 +101,7 @@
             margin-bottom: 4rem;
             text-align: center;
         }
+        /*responsive flexbox gallery*/
         .gallery{
             display:flex;
             gap: 20px;
@@ -136,7 +142,7 @@
             margin: 0 5px;
             transition: 0.3s;
         }
-    
+        /*scroll buttons scales up and changes colour when hovered*/
         .arrow-buttons button:hover{
             transform: scale(1.1);
             background-color: var(--primary-color);
@@ -144,6 +150,7 @@
     
     
         @media(max-width: 768px){
+            /*only one column for mobile devices*/
             .gallery{
                 flex-direction: column;
             }

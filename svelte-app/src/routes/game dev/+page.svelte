@@ -42,6 +42,7 @@
     ];
 </script>
 <div class="nav-container">
+    <!--import portfolio navigation component-->
     <PortfolioNav />
 </div>
     <div class="container">
@@ -55,6 +56,7 @@
                     <p class="project-description">{gameProjects[0].description}</p>
                     
                     <div class="media-container">
+                        <!--manually renders all the data from the first([0]) project in the gameProjects array-->
                         {#if gameProjects[0].video}
                             <VideoViewer 
                                 src={gameProjects[0].video.src}
@@ -75,11 +77,11 @@
             
             <div class="column">
                 <!-- Second column: Kafka and Space Shooter -->
-                {#each gameProjects.slice(1) as project}
+                {#each gameProjects.slice(1) as project} <!--.slice(1) excludes the first project so Candyland is not taken into account-->
                     <div class="project-card">
                         <h3 class="project-title">{project.title}</h3>
                         <p class="project-description">{project.description}</p>
-                        
+                        <!--when checked for video Kafka game is rendered. when for image Space Shooter is rendered-->
                         <div class="media-container">
                             {#if project.video}
                                 <VideoViewer 

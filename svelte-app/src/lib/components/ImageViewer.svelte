@@ -1,11 +1,12 @@
 <script>
+  //svelte built in transitions
   import { fade, scale } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
 
-  // Props
-  export let src = '';
-  export let alt = '';
-  export let description = '';
+  // Props passed into the component
+  export let src = ''; //image URL
+  export let alt = ''; //ale text
+  export let description = ''; //description text below the expanded image
   
   // State
   let expanded = false;
@@ -52,11 +53,14 @@
   >
     <img {src} {alt} />
     <div class="click-indicator">
+      <!--hint that will appear on images so user knows he can expand the images-->
       <span>Click to view</span>
     </div>
   </div>
   
   <!-- Expanded overlay -->
+   <!--when image is expanded it shows background overlay, image and its dexription-->
+   <!--fade effect in description and overlay, scaling effect on image-->
   {#if expanded}
     <div 
       class="overlay" 
@@ -70,7 +74,7 @@
           delay: 100,
           opacity: 1,
           start: 0.8, 
-          easing: quintOut 
+          easing: quintOut //snooth animation curve
         }}
       >
         <img {src} {alt} />
@@ -126,7 +130,7 @@
     font-size: 0.9rem;
     font-weight: 500;
   }
-  
+  /* hint fades in when image is hovered*/
   .image:hover .click-indicator {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);

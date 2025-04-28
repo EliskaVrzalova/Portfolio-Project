@@ -1,4 +1,5 @@
 <script>
+  //same logic as ImageViewer.svelte
   import { fade, scale } from 'svelte/transition';
   import { quintOut } from 'svelte/easing';
 
@@ -53,6 +54,7 @@
     role="button"
     tabindex="0"
   >
+  <!--videos will be playing muted on loop-->
     <video 
       src={src}
       poster={poster}

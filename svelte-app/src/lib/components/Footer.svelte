@@ -2,7 +2,7 @@
   // Current year for copyright
   const currentYear = new Date().getFullYear();
 </script>
-
+<!-- 3 sections/column footer-->
 <footer role="contentinfo">
   <div class="footer-container">
     <!-- Quick links section -->
@@ -18,13 +18,13 @@
       </ul>
     </div>
 
-    <!-- Social media section with image links -->
+    <!-- Social media icons section -->
     <div class="footer-section social-section">
       <h3 id="social-links">Connect With Me</h3>
       <div class="social-links" aria-labelledby="social-links">
         <a href="https://www.instagram.com/_evrzlv_/" target="_blank" rel="noopener noreferrer" aria-label="Follow me on Instagram">
           <img src="/instagram.png" alt="" class="social-icon" aria-hidden="true" />
-          <span class="visually-hidden">Instagram</span>
+          <span class="visually-hidden">Instagram</span> <!--descriptions hidden but available for screen readers-->
         </a>
         <a href="https://github.com/EliskaVrzalova" target="_blank" rel="noopener noreferrer" aria-label="View my projects on GitHub">
           <img src="/github.png" alt="" class="social-icon" aria-hidden="true" />
@@ -49,6 +49,7 @@
     <div class="footer-section">
       <h3 id="contact-info">Contact</h3>
       <p>Feel free to reach out for collaborations, inquiries, or just to say hello!</p>
+      <!--link to email-->
       <a href="mailto:eliska.vrzalovaa@gmail.com" class="email-link" aria-labelledby="contact-info">eliska.vrzalovaa@gmail.com</a>
       <div class="copyright" role="contentinfo">
         <p>&copy; {currentYear} Eliska Vrzalova. All rights reserved.</p>
@@ -86,7 +87,7 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-
+  /*portfolio menu*/
   .footer-section {
     display: flex;
     flex-direction: column;
@@ -159,11 +160,11 @@
     border-radius: 8px;
     transition: transform 0.3s ease;
   }
-
+  /*social icons lift up slightly when hovered*/
   .social-links a:hover {
     transform: translateY(-5px);
   }
-
+  /*social icons get slightly bigger when hovered*/
   .social-links a:hover .social-icon {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -182,7 +183,7 @@
     margin-bottom: 1.5rem;
     display: inline-block;
   }
-
+  /*email link changes colour when hovered*/
   .email-link:hover {
     color: var(--primary-color);
   }
@@ -194,6 +195,7 @@
   }
 
   /* Responsive Design */
+  /*mobile devices*/
   @media (min-width: 768px) {
     .footer-container {
       grid-template-columns: repeat(2, 1fr);
@@ -217,7 +219,7 @@
     }
   }
 
-  @media (min-width: 1024px) {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
     .footer-container {
       grid-template-columns: repeat(3, 1fr);
     }

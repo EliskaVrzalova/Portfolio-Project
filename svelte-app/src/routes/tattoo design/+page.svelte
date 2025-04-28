@@ -41,11 +41,13 @@
     ];
 </script>
 <div class="nav-container">
+     <!--import portfolio navigation component-->
     <PortfolioNav />
 </div>
 <div class="container">
     <h1 class="title">Tattoo Design</h1>
     <div class="gallery">
+        <!--two images in column1 and three images in column2-->
         <div class="column">
             <div class="picture">
                 {#each column1Images as image}
@@ -74,6 +76,7 @@
         </div>
     </div>
 </div>
+  <!--button that return to the top of the page-->
 <div class="arrow-buttons">
     <button class="up" on:click={scrollToTop}>↑</button>
 </div>
@@ -139,6 +142,7 @@
 
 
     @media(max-width: 768px){
+        /*one column layout for mobile devices*/
             .gallery{
                 flex-direction: column;
             }

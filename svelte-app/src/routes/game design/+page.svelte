@@ -9,6 +9,7 @@
     }
     
     // Game design content organized by type
+    //images
     const playerDesigns = [
         {
             src: "/player1-design.png",
@@ -26,7 +27,7 @@
             description: "Third variant of player spacecraft."
         }
     ];
-    
+    //gifs
     const animationAssets = [
         {
             src: "/player idle.gif",
@@ -44,7 +45,7 @@
             description: "Enemy attack animation displaying weapon discharge and recoil effects."
         }
     ];
-    
+    //big images
     const uiElements = [
         {
             src: "/menu.png",
@@ -59,13 +60,14 @@
     ];
 </script>
 <div class="nav-container">
+    <!--import portfolio navigation component-->
     <PortfolioNav />
 </div>
     <div class="container">
         <h1 class="title">Game Design</h1>
         
         <div class="gallery">
-
+            <!--big images in first column-->
             <div class="column">
                 <div class="picture">
                     {#each uiElements as image}
@@ -79,6 +81,7 @@
                     {/each}
                 </div>
             </div>
+            <!--small images and gifs in second column-->
             <div class="column">
                 <div class="picture">
                     {#each playerDesigns as image}
@@ -105,6 +108,7 @@
             </div>
         </div>
     </div>
+    <!--button that return to the top of the page-->
     <div class="arrow-buttons">
         <button class="up" on:click={scrollToTop}>↑</button>
     </div>

@@ -130,7 +130,7 @@
         width: 0%;
         transition: all 0.5s ease;
     }
-    
+    /*link gets filled with white colour*/
     .desktop-nav ul li a.active:before {
         width: 100%;
     }
@@ -143,7 +143,7 @@
         width: 100%;
     }
     
-    /* Focus state */
+    /* Focus state, clicked link remains white */
     .desktop-nav ul li a:focus {
         color: white;
         text-decoration: none;
@@ -195,6 +195,7 @@
         }
         
         /* Hamburger Button Animation */
+        /*middle line disappers and two remaining lines rotate to create a cross*/
         /*first line of the icon*/
         .hamburger-btn.open span:nth-child(1) {
             transform: translateY(10px) rotate(45deg);
@@ -216,6 +217,7 @@
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
             z-index: 999;
             opacity: 0;
             visibility: hidden;
