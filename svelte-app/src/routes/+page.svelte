@@ -1,4 +1,5 @@
 <script>
+    //form
     let showModal = false;
     let formData = {
         name: '',
@@ -42,7 +43,7 @@
     <div class="floating-shape shape3"></div>
     <div class="floating-shape shape4"></div>
 </div>
-
+<!--hero image and text-->
 <div class="hero-container">
     <div class="text-content">
         <div class="hero-text">
@@ -60,6 +61,7 @@
         <img src="/hero.png" alt="homepage hero" id="hero">
     </div>
 </div>
+<!--divider to separate sections better-->
 <div class="divider"></div>
 <div class="focus-areas">
     <div class="text-focus-areas">
@@ -84,6 +86,7 @@
     <div class="text-socials">
     <h2>Find me on:</h2>
 </div>
+<!--social media icons with links, opening in new tabs when clicked-->
 <div class="icons-socials">
     <a href="https://www.instagram.com/_evrzlv_/" target="_blank" rel="noopener noreferrer">
     <img src="/instagram.png" alt="instagram logo"></a>
@@ -97,6 +100,7 @@
     <img src="/gmail-logo.png" alt="G-mail logo"></a>
 </div>
 </div>
+<!--container for the form and the pictures-->
 <div class="bottom-container">
 <div class="butterflies">
     <img src="/butterflies.png" alt="flock of butterflies">
@@ -108,7 +112,7 @@
 <div class="form-container">
     <form on:submit={handleSubmit} class="contact-form">
         <h2>Get in touch with me right here and right now!</h2>
-        
+        <!--full width field takes space of the entire form width making in one input row on one line-->
         <div class="form-row">
             <div class="form-field full-width">
                 <label for="name">Your Name</label>
@@ -140,11 +144,12 @@
 </div>
 </div>
 </div>
+    <!--button that return to the top of the page-->
 <div class="arrow-buttons">
     <button class="up" on:click={scrollToTop}>↑</button>
 </div>
 
-
+<!--show this modal if the form is filled out and submitted-->
 {#if showModal}
 <div class="modal">
     <div class="modal-content">
@@ -217,6 +222,7 @@
     opacity: 0;
 
 }
+/*rainbow gradient border around the button when its hovered*/
 .portfolio-button::before {
     content: '';
     position: absolute;
@@ -243,7 +249,7 @@
 .portfolio-button button:hover:after {
   opacity: 1;
 }
-
+/*gradient animation*/
 @keyframes animateGlow {
     0% {
         background-position: 0 0;
@@ -282,7 +288,7 @@
     left: 30%;
     z-index: -1;
     animation-delay: 0s;
-    border-radius: 30% 40% 60% 30% / 30% 50% 40% 60%;
+    border-radius: 30% 40% 60% 30% / 30% 50% 40% 60%; /*creating uneven blob*/
 }
 
 .shape2 {
@@ -315,7 +321,7 @@
     animation-delay: -15s;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
 }
-
+/*floating like animation for the blobs*/
 @keyframes float {
     0%, 100% { transform: translate(0, 0) rotate(0deg); }
     25% { transform: translate(20px, 20px) rotate(5deg); }
@@ -427,12 +433,12 @@
 }
 
 .focus-item:hover {
-    opacity: 1 !important;
+    opacity: 1 !important; /*must be visible*/
     z-index: 1;
 }
 
 .focus-item:hover img {
-    transform: scale(1.2) !important;
+    transform: scale(1.2) !important; /*must scale up*/
     opacity: 1;
 }
 
@@ -474,7 +480,7 @@
         transition: all 0.3s ease;
         box-shadow: 0 2px 5px rgb(157, 45, 198);
     }
-
+    /*if the form field is clicked to type in, it lifts up slightly*/
     input:focus, textarea:focus {
         outline: none;
         transform: translateY(-2px);
@@ -497,7 +503,7 @@
        background-color: #a779bb;
        overflow: hidden;
     }
-
+    /*submitr button hover effect*/
     .submit-button::before {
         content: '';
         position: absolute;
@@ -523,7 +529,7 @@
     .submit-button:hover{
         transform: scale(1.1);
     }
-
+    /*two colum layout 1 colum image 2 colum form*/
     .contact-me-grid{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -560,6 +566,7 @@
         display: flex;
         justify-content: center;
     }
+    /*backgroun picture*/
     .butterflies {
         position: absolute;
         z-index: -1;
@@ -695,6 +702,7 @@
             margin-top: 4rem;
             min-height: auto;
         }
+        /*horizonatl scrolling through social icons on mobile devices*/
         .icons-socials {
             flex-direction: row;
             flex-wrap: nowrap;

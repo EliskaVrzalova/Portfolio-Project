@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
 
     onMount(() => {
+        //arrow buttons that control the menu scrolling
         const next = document.querySelector('.next');
         const previous = document.querySelector('.previous');
         
@@ -51,6 +52,7 @@
 
 <div class="overlay"></div>
 <div class="container">
+    <!--portfolio sections with their bg images, titles and brief description-->
     <div class="card">
         <div class="item" style="background-image: url('/web-design.png');"  aria-label="Web design background">
             <div class="text">
@@ -97,12 +99,14 @@
     </div>
     
 </div>
+<!--arrow buttons to control the portfolio menu-->
 <div class="arrow-buttons">
     <button class="previous" aria-label="Previous project">←</button>
     <button class="next" aria-label="Next project">→</button>
 </div>
 
 <style>
+    /*darker effect*/
           .overlay {
         position: fixed;
         top: 0;
@@ -126,6 +130,7 @@
         z-index: -1; /* Keep background images below the overlay */
         box-shadow: 0 30px 40px #ffffff;
     }
+    /*upcoming cards*/
     .container .card .item{
         width:300px;
         height:200px;
@@ -141,6 +146,8 @@
 
     }
 
+/*calculating the gaps between the cards based on the width (300px) and gap(20px) of each card*/
+/*second child visible first*/
     .card .item:nth-child(1),
      .card .item:nth-child(2){
         top:0;
@@ -180,12 +187,12 @@
         display:none;
         z-index: 1;
     }
-
+    /*text for the second child visible first*/
     .card .item:nth-child(2) .text{
         display:block;
     }
 
-
+    /*reveal animation effect applied on everything inside the text container*/
     .text .title{
         font-size:var(--font-size-h2);
         font-weight: bold;
@@ -216,7 +223,7 @@
         padding:10px 20px 10px 20px;
         border-radius:50px;
     }
-    
+    /*button hover effect*/
     .text button::before {
         content: '';
         position: absolute;

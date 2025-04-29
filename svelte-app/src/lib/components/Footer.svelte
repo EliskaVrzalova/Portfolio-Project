@@ -9,11 +9,11 @@
     <div class="footer-section" role="navigation" aria-labelledby="portfolio-nav">
       <h3 id="portfolio-nav">Portfolio</h3>
       <ul class="quick-links">
-        <li><a href="/digital-art">Digital Art</a></li>
+        <li><a href="/digital art">Digital Art</a></li>
         <li><a href="/paintings">Paintings</a></li>
-        <li><a href="/web-design">Web Design</a></li>
-        <li><a href="/game-design">Game Design</a></li>
-        <li><a href="/tattoo-design">Tattoo Design</a></li>
+        <li><a href="/web design">Web Design</a></li>
+        <li><a href="/game design">Game Design</a></li>
+        <li><a href="/tattoo design">Tattoo Design</a></li>
         <li><a href="/game dev">Game Development</a></li>
       </ul>
     </div>
@@ -84,7 +84,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
   }
   /*portfolio menu*/
@@ -139,7 +139,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .social-icon {
@@ -196,7 +196,7 @@
 
   /* Responsive Design */
   /*mobile devices*/
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .footer-container {
       grid-template-columns: repeat(2, 1fr);
     }
