@@ -1,7 +1,10 @@
+<script>
+     import { base } from '$app/paths';
+</script>
 <div class="cv-grid">
 	<div class="left-col"></div>
     <div class="image">
-        <img src="/cv-me.png" alt="picture of eliska on CV">
+        <img src="{base}/cv-me.png" alt="Eliska">
     </div>
 	<div class="info">
         <h2>Eliska Vrzalova</h2>

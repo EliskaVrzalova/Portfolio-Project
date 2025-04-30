@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { ImageViewer, VideoViewer, PortfolioNav } from "$lib";
     
     function scrollToTop() {
@@ -14,8 +15,8 @@
             title: "Candyland Adventure",
             description: "Second year tudent project- great practice for me to familiarize myself with JavaScript",
             video: {
-                src: "/candyland.mov",
-                poster: "/candyland-poster.jpg",
+                src: `${base}/candyland.mov`,
+                poster: `${base}/candyland-poster.jpg`,
                 alt: "Candyland Adventure gameplay footage",
                 description: "Gameplay demonstration showcasing player movement, environmental interactions, and the candy-themed map design. The game features assest I created."
             }
@@ -24,8 +25,8 @@
             title: "Kafka's Metamorphosis",
             description: "An experimental narrative game inspired by Franz Kafka's novella. This project was done in the first year of my degree course in a team. For this project I took the role of concept artist and designer",
             video: {
-                src: "/kafka.mp4",
-                poster: "/kafka-poster.jpg",
+                src: `${base}/kafka.mp4`,
+                poster: `${base}/kafka-poster.jpg`,
                 alt: "Kafka's Metamorphosis game footage",
                 description: "Metamorphosis gameplay which together with the dark aesthetics to Franz Kafka's story. "
             }
@@ -34,7 +35,7 @@
             title: "Space Shooter Arcade",
             description: "A retro-inspired pixel art space shooter created with custom sprite work and classic arcade gameplay mechanics. My final first year project.",
             image: {
-                src: "/SpaceShooter.jpg",
+                src: `${base}/SpaceShooter.jpg`,
                 alt: "Pixel art space shooter arcade game",
                 description: "Instruction screen for the space shooter game."
             }

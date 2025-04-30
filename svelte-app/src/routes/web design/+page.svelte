@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { ImageViewer, VideoViewer, PortfolioNav } from "$lib";
     
     function scrollToTop() {
@@ -11,25 +12,25 @@
     // Website content organized by sections
     //video
     const videoContent = {
-        src: "/homepage.mp4",
-        poster: "/homepage.jpg",
+        src: `${base}/homepage.mp4 `,
+        poster: `${base}/homepage.jpg `,
         alt: "Website homepage interaction video",
         description: "Interactive demonstration of the movie website homepage. This video showcases the responsive navigation, and dynamic content that creates an engaging user experience."
     };
     //images
     const websiteScreenshots = [
         {
-            src: "/nosignal-homepage.png",
+            src: `${base}/nosignal-homepage.png `,
             alt: "NoSignal Media website homepage",
             description: "Homepage design for the No Signal Media website. The layout features a clean, dark aesthetic with high-contrast elements to highlight featured content and improve readability. The navigation system provides intuitive access to all site sections."
         },
         {
-            src: "/nosignal-movies.png",
+            src: `${base}/nosignal-movies.png `,
             alt: "NoSignal Media movies listing page",
             description: "Theatre movies listing page showcasing the grid layout of film selections. Each card displays key information including release date, rating, and genre tags."
         },
         {
-            src: "/nosignal-contact.png",
+            src: `${base}/nosignal-contact.png `,
             alt: "NoSignal Media contact and suggestions page",
             description: "Content suggestions and contact page, featuring an interactive form for user feedback and movie recommendations. The design maintains consistency with the site's overall aesthetic while providing clear input fields and submission controls."
         }
