@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     // import Navigation.svelte from lib folder
     import { Navigation } from "$lib"
 </script>
@@ -7,8 +8,8 @@
 
 <header>
     <!-- Profile picture icon as homepage link -->
-    <a href="/" class="home-link">
-        <div class="profile-picture"></div></a>
+    <a href="{base}/" class="home-link">
+        <div class="profile-picture" style="background-image: url('{base}/profilePic.png');"></div></a>
     <Navigation />
 </header>
 
@@ -41,7 +42,6 @@ header::after {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-image: url('/profilePic.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

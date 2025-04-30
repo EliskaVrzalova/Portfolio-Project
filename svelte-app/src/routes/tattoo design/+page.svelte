@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { ImageViewer, PortfolioNav } from "$lib";
     
     function scrollToTop() {
@@ -11,12 +12,12 @@
     // Tattoo design images with descriptions
     const column1Images = [
         {
-            src: "/kenjaku.JPG",
+            src: `${base}/kenjaku.JPG`,
             alt: "Tattoo design: Kenjaku, Jujutsu Kaisen",
             description: "Custom tattoo design featuring Kenjaku from Jujutsu Kaisen. This design captures the character's sinister essence through detailed linework and shading techniques ideal for body art."
         },
         {
-            src: "/dragon.png",
+            src: `${base}/dragon.png`,
             alt: "Tattoo design from first draft to final design on body: japanese dragon",
             description: "Evolution of a Japanese dragon tattoo design from initial concept to final application. This traditional-inspired piece showcases the dynamic flow and scale patterns characteristic of Eastern dragon mythology."
         }
@@ -24,17 +25,17 @@
     
     const column2Images = [
         {
-            src: "/fox.JPG",
+            src: `${base}/fox.JPG`,
             alt: "Tattoo design: japanese fox Kitsune",
             description: "Japanese Kitsune (fox) tattoo design blending traditional and contemporary styles. The mythological fox spirit is depicted with flowing nine tails and mystical elements representing wisdom and cunning."
         },
         {
-            src: "/choso (1).png",
+            src: `${base}/choso (1).png`,
             alt: "Multiple design drafts: Choso, Jujutsu Kaisen",
             description: "Exploratory drafts for a Choso (Jujutsu Kaisen) tattoo design. These sketches experiment with different poses and compositional elements to capture the character's unique abilities and personality."
         },
         {
-            src: "/choso (2).JPG",
+            src: `${base}/choso (2).JPG`,
             alt: "Tattoo design: Choso, Jujutsu Kaisen",
             description: "Finalized tattoo design of Choso from Jujutsu Kaisen. This refined illustration features clean linework and balanced composition optimized for skin application while preserving the character's distinct features."
         }

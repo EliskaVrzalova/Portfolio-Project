@@ -1,4 +1,5 @@
 <script>
+         import { base } from '$app/paths';
     import { ImageViewer, PortfolioNav } from "$lib";
     
     function scrollToTop() {
@@ -12,17 +13,17 @@
     //images
     const playerDesigns = [
         {
-            src: "/player1-design.png",
+            src: `${base}/player1-design.png`,
             alt: "Design of player space rocket - variant 1",
             description: "First variant of player spacecraft design."
         },
         {
-            src: "/player2-design.png",
+            src: `${base}/player2-design.png`,
             alt: "Design of player space rocket - variant 2",
             description: "Second variant of player spacecraft."
         },
         {
-            src: "/player3-design.png",
+            src: `${base}/player3-design.png`,
             alt: "Design of player space rocket - variant 3",
             description: "Third variant of player spacecraft."
         }
@@ -30,17 +31,17 @@
     //gifs
     const animationAssets = [
         {
-            src: "/player idle.gif",
+            src: `${base}/player idle.gif`,
             alt: "Player rocket idle animation",
             description: "Player spacecraft idle animation showing subtle engine effects and stabilizer movements. The animation creates a sense of a ship hovering in space, ready for action."
         },
         {
-            src: "/enemy upgrade.gif",
+            src: `${base}/enemy upgrade.gif`,
             alt: "Enemy upgrade animation sequence",
             description: "Animation sequence showing an enemy spacecraft powering up. The transformation illustrates how enemies evolve during gameplay, presenting escalating challenges."
         },
         {
-            src: "/enemy shoot.gif",
+            src: `${base}/enemy shoot.gif`,
             alt: "Enemy attack animation",
             description: "Enemy attack animation displaying weapon discharge and recoil effects."
         }
@@ -48,12 +49,12 @@
     //big images
     const uiElements = [
         {
-            src: "/menu.png",
+            src: `${base}/menu.png`,
             alt: "Game menu design",
             description: "Main menu interface design for space-themed game"
         },
         {
-            src: "/game-background.png",
+            src: `${base}/game-background.png`,
             alt: "In-game background environment",
             description: "Space-themed game background. It creates depth and atmosphere while ensuring gameplay elements remain visually distinct."
         }

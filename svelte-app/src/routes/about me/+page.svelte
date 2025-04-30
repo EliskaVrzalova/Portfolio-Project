@@ -1,6 +1,9 @@
+<script>
+    import { base } from '$app/paths';
+</script>
 <div class="about-me-container">
     <div class="image">
-        <img src="/aboutme.png" alt="Eliska">
+        <img src="{base}/aboutme.png" alt="Eliska">
     </div>
     <div class="text">
         <h2>Who am I?</h2>
@@ -13,21 +16,21 @@
                 
                 I hope you will enjoy the experience this website offers you and feel the message I'm sending you. <br>
                 <div class="signature">
-                <img src="/eliska.png" alt="Eliska's signature">
+                <img src="{base}/eliska.png" alt="Eliska's signature">
             </div>
                 
                 
     </div>
     <div class="SW-skills">
-        <img src="/photoshop.png" alt="photoshop icon">
-        <img src="/indesign.png" alt="in design icon">
-        <img src="/illustrator.png" alt="adobe illustrator icon">
-        <img src="/animate.png" alt="adobe animte icon">
-        <img src="visualstudio.png" alt="visual studio icon">
-        <img src="/inkscape.png" alt="inkscape icon">
-        <img src="/canva.png" alt="canva icon">
-        <img src="/figma.png" alt="figma icon">
-        <img src="/penpot.png" alt="penpot icon">
+        <img src="{base}/photoshop.png" alt="photoshop icon">
+        <img src="{base}/indesign.png" alt="in design icon">
+        <img src="{base}/illustrator.png" alt="adobe illustrator icon">
+        <img src="{base}/animate.png" alt="adobe animte icon">
+        <img src="{base}/visualstudio.png" alt="visual studio icon">
+        <img src="{base}/inkscape.png" alt="inkscape icon">
+        <img src="{base}/canva.png" alt="canva icon">
+        <img src="{base}/figma.png" alt="figma icon">
+        <img src="{base}/penpot.png" alt="penpot icon">
     </div>
 </div>
 

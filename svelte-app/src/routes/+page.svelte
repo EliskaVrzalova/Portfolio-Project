@@ -1,4 +1,5 @@
 <script>
+     import { base } from '$app/paths';
     //form
     let showModal = false;
     let formData = {
@@ -51,14 +52,14 @@
         <h1 id="my-name">My name is Eliska Vrzalova</h1>
         <p>I am a college student aspiring to be UX/ UI Designer, Concept Artist, and just the most creative version of myself.</p>
     </div>
-        <a href="/portfolio" class="portfolio-button-link">
+        <a href="{base}/portfolio" class="portfolio-button-link">
         <div class="portfolio-button">
             <button type="button">Explore my portfolio!</button>
         </div></a>
     </div>
   
     <div class="hero-image-container">
-        <img src="/hero.png" alt="homepage hero" id="hero">
+        <img src="{base}/hero.png" alt="homepage hero" id="hero">
     </div>
 </div>
 <!--divider to separate sections better-->
@@ -69,15 +70,15 @@
 </div>
 <div class="icons-focus-areas">
     <div class="focus-item">
-        <img src="/front-end-programming.png" alt="front end programming icon">
+        <img src="{base}/front-end-programming.png" alt="front end programming icon">
         <h3>Front-end Development</h3>
     </div>
     <div class="focus-item">
-        <img src="/uiux.png" alt="UI and UX design icon">
+        <img src="{base}/uiux.png" alt="UI and UX design icon">
         <h3>UI/UX Design</h3>
     </div>
     <div class="focus-item">
-        <img src="/website-design.png" alt="Web design icon">
+        <img src="{base}/website-design.png" alt="Web design icon">
         <h3>Web Design</h3>
     </div>
 </div>
@@ -89,25 +90,25 @@
 <!--social media icons with links, opening in new tabs when clicked-->
 <div class="icons-socials">
     <a href="https://www.instagram.com/_evrzlv_/" target="_blank" rel="noopener noreferrer">
-    <img src="/instagram.png" alt="instagram logo"></a>
+    <img src="{base}/instagram.png" alt="instagram logo"></a>
     <a href="https://github.com/EliskaVrzalova" target="_blank" rel="noopener noreferrer">
-    <img src="/github.png" alt="Github logo"></a>
+    <img src="{base}/github.png" alt="Github logo"></a>
     <a href="https://discord.com/users/1332386471621165226" target="_blank" rel="noopener noreferrer">
-    <img src="/discord.png" alt="Discord logo"></a>
+    <img src="{base}/discord.png" alt="Discord logo"></a>
     <a href="https://x.com/vrzalova_eliska" target="_blank" rel="noopener noreferrer">
-    <img src="/twitter.png" alt="X (Twitter) logo"></a>
+    <img src="{base}/twitter.png" alt="X (Twitter) logo"></a>
     <a href="mailto:eliska.vrzalovaa@gmail.com">
-    <img src="/gmail-logo.png" alt="G-mail logo"></a>
+    <img src="{base}/gmail-logo.png" alt="G-mail logo"></a>
 </div>
 </div>
 <!--container for the form and the pictures-->
 <div class="bottom-container">
 <div class="butterflies">
-    <img src="/butterflies.png" alt="flock of butterflies">
+    <img src="{base}/butterflies.png" alt="flock of butterflies">
 </div>
 <div class="contact-me-grid">
 <div class="form-picture">
-    <img src="/contactPic.png" alt="Eliska next to the contact form">
+    <img src="{base}/contactPic.png" alt="Eliska next to the contact form">
 </div>
 <div class="form-container">
     <form on:submit={handleSubmit} class="contact-form">

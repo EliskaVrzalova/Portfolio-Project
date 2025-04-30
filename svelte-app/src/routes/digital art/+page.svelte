@@ -1,4 +1,5 @@
 <script>
+     import { base } from '$app/paths';
     import { ImageViewer, PortfolioNav } from "$lib";
     //button at the end of the page allowing user to return back to the top without having to scroll
     function scrollToTop() {
@@ -12,17 +13,17 @@
     // two columns
     const column1Images = [
         {
-            src: "/oldmansketch.png",
+            src: `${base}/oldmansketch.png`,
             alt: "Sketches drafts of old man",
             description: "Early concept sketches of an elderly character. These drafts explore different facial features and expressions to capture the essence of age and wisdom."
         },
         {
-            src: "/concept-art.jpg",
+            src: `${base}/concept-art.jpg`,
             alt: "Concept art for fictional character",
             description: "Character concept art showing various design iterations. These explorations helped establish the final visual direction for this fictional character."
         },
         {
-            src: "/character_turn_around (1).png",
+            src: `${base}/character_turn_around (1).png`,
             alt: "Fictional character turn around",
             description: "Character turnaround sheet showing the character from multiple angles. This reference ensures consistency when viewed from different perspectives.Later used for animation"
         }
@@ -30,17 +31,17 @@
     
     const column2Images = [
         {
-            src: "/old man.jpg",
+            src: `${base}/old man.jpg`,
             alt: "Final art of the old man",
             description: "Final art of the elderly character."
         },
         {
-            src: "/final-art.jpg",
+            src: `${base}/final-art.jpg`,
             alt: "Final art of the fictional character", 
             description: "Completed character illustration showing the final design with detailed shading, texturing, and color treatment typical for comics and anime style."
         },
         {
-            src: "/metamorphosis assets (1).png",
+            src: `${base}/metamorphosis assets (1).png`,
             alt: "Assets for a video game",
             description: "Game asset collection for 'Metamorphosis', featuring various elements designed for the game environment."
         }

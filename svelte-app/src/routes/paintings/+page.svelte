@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
     import { ImageViewer, PortfolioNav } from "$lib";
     
     function scrollToTop() {
@@ -11,12 +12,12 @@
     // Paintings data with descriptions
     const column1Images = [
         {
-            src: "/London.jpg",
+            src: `${base}/London.jpg`,
             alt: "Painting: London city street",
             description: "London street, Acrylic on canvas."
         },
         {
-            src: "/japan.jpg",
+            src: `${base}/japan.jpg`,
             alt: "Painting: abstract autoportrait",
             description: "An abstract self-portrait influenced by Japanese artistic styles."
         }
@@ -24,12 +25,12 @@
     
     const column2Images = [
         {
-            src: "/astronaut.jpg",
+            src: `${base}/astronaut.jpg`,
             alt: "Painting: Astronaut in space",
             description: "A surreal depiction of an astronaut floating in space, Acrylic on wooden desk."
         },
         {
-            src: "/jacket.jpg",
+            src: `${base}/jacket.jpg`,
             alt: "Painting: abstract portrait of a man",
             description: "An abstract portrait of a man. Acrylic on jacket."
         }

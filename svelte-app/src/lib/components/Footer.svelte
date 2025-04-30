@@ -1,4 +1,5 @@
 <script>
+    import { base } from '$app/paths';
   // Current year for copyright
   const currentYear = new Date().getFullYear();
 </script>
@@ -9,12 +10,12 @@
     <div class="footer-section" role="navigation" aria-labelledby="portfolio-nav">
       <h3 id="portfolio-nav">Portfolio</h3>
       <ul class="quick-links">
-        <li><a href="/digital art">Digital Art</a></li>
-        <li><a href="/paintings">Paintings</a></li>
-        <li><a href="/web design">Web Design</a></li>
-        <li><a href="/game design">Game Design</a></li>
-        <li><a href="/tattoo design">Tattoo Design</a></li>
-        <li><a href="/game dev">Game Development</a></li>
+        <li><a href="{base}/digital art">Digital Art</a></li>
+        <li><a href="{base}/paintings">Paintings</a></li>
+        <li><a href="{base}/web design">Web Design</a></li>
+        <li><a href="{base}/game design">Game Design</a></li>
+        <li><a href="{base}/tattoo design">Tattoo Design</a></li>
+        <li><a href="{base}/game dev">Game Development</a></li>
       </ul>
     </div>
 
@@ -23,23 +24,23 @@
       <h3 id="social-links">Connect With Me</h3>
       <div class="social-links" aria-labelledby="social-links">
         <a href="https://www.instagram.com/_evrzlv_/" target="_blank" rel="noopener noreferrer" aria-label="Follow me on Instagram">
-          <img src="/instagram.png" alt="" class="social-icon" aria-hidden="true" />
+          <img src="{base}/instagram.png" alt="" class="social-icon" aria-hidden="true" />
           <span class="visually-hidden">Instagram</span> <!--descriptions hidden but available for screen readers-->
         </a>
         <a href="https://github.com/EliskaVrzalova" target="_blank" rel="noopener noreferrer" aria-label="View my projects on GitHub">
-          <img src="/github.png" alt="" class="social-icon" aria-hidden="true" />
+          <img src="{base}/github.png" alt="" class="social-icon" aria-hidden="true" />
           <span class="visually-hidden">GitHub</span>
         </a>
         <a href="https://discord.com/users/1332386471621165226" target="_blank" rel="noopener noreferrer" aria-label="Contact me on Discord">
-          <img src="/discord.png" alt="" class="social-icon" aria-hidden="true" />
+          <img src="{base}/discord.png" alt="" class="social-icon" aria-hidden="true" />
           <span class="visually-hidden">Discord</span>
         </a>
         <a href="https://x.com/vrzalova_eliska" target="_blank" rel="noopener noreferrer" aria-label="Follow me on X (formerly Twitter)">
-          <img src="/twitter.png" alt="" class="social-icon" aria-hidden="true" />
+          <img src="{base}/twitter.png" alt="" class="social-icon" aria-hidden="true" />
           <span class="visually-hidden">X (Twitter)</span>
         </a>
         <a href="mailto:eliska.vrzalovaa@gmail.com" aria-label="Send me an email">
-          <img src="/gmail-logo.png" alt="" class="social-icon" aria-hidden="true" />
+          <img src="{base}/gmail-logo.png" alt="" class="social-icon" aria-hidden="true" />
           <span class="visually-hidden">Email</span>
         </a>
       </div>

@@ -1,4 +1,5 @@
 <script>
+     import { base } from '$app/paths';
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
     
@@ -28,9 +29,9 @@
 <!-- Desktop Navigation -->
 <nav class="desktop-nav">
     <ul>
-        <li><a href="/portfolio" data-text="portfolio" class={$page.url.pathname === '/portfolio' ? 'active' : ''}>portfolio</a></li>
-        <li><a href="/about me" data-text="about me" class={$page.url.pathname ===  '/about%20me' ? 'active' : ''}>about me</a></li>
-        <li><a href="/CV" data-text="CV" class={$page.url.pathname === '/CV' ? 'active' : ''}>CV</a></li>
+        <li><a href="{base}/portfolio" data-text="portfolio" class={$page.url.pathname === base +'/portfolio' ? 'active' : ''}>portfolio</a></li>
+        <li><a href="{base}/about me" data-text="about me" class={$page.url.pathname ===  base +'/about%20me' ? 'active' : ''}>about me</a></li>
+        <li><a href="{base}/CV" data-text="CV" class={$page.url.pathname ===base + '/CV' ? 'active' : ''}>CV</a></li>
     </ul>
 </nav>
 
@@ -55,8 +56,8 @@
             <ul>
                 <li>
                     <a 
-                        href="/portfolio" 
-                        class={$page.url.pathname === '/portfolio' ? 'active' : ''}
+                        href="{base}/portfolio" 
+                        class={$page.url.pathname === base + '/portfolio' ? 'active' : ''}
                         on:click={closeMenu}
                     >
                         portfolio
@@ -64,8 +65,8 @@
                 </li>
                 <li>
                     <a 
-                        href="/about me" 
-                        class={$page.url.pathname === '/about%20me' ? 'active' : ''}
+                        href="{base}/about me" 
+                        class={$page.url.pathname === base + '/about%20me' ? 'active' : ''}
                         on:click={closeMenu}
                     >
                         about me
@@ -73,8 +74,8 @@
                 </li>
                 <li>
                     <a 
-                        href="/CV" 
-                        class={$page.url.pathname === '/CV' ? 'active' : ''}
+                        href="{base}/CV" 
+                        class={$page.url.pathname === base + '/CV' ? 'active' : ''}
                         on:click={closeMenu}
                     >
                         CV

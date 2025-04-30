@@ -1,14 +1,14 @@
 <script>
+    import { base } from '$app/paths';
     import { page } from '$app/stores';
 </script>
 <nav role="navigation" aria-label="Portfolio categories">
     <ul role="menubar">
-        <li role="none"><a href="/game design" data-text="Game Design" class={$page.url.pathname === '/game%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/game%20design' ? 'page' : undefined}>Game Design</a></li>
-        <li role="none"><a href="/game dev" data-text="Game Development" class={$page.url.pathname ===  '/game%20dev' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/game%20dev' ? 'page' : undefined}>Game Development</a></li>
-        <li role="none"><a href="/digital art" data-text="Digital Art" class={$page.url.pathname === '/digital%20art' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/digital%20art' ? 'page' : undefined}>Digital Art</a></li>
-        <li role="none"><a href="/tattoo design" data-text="Tattoo Design" class={$page.url.pathname === '/tattoo%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/tattoo%20design' ? 'page' : undefined}>Tattoo Design</a></li>
-        <li role="none"><a href="/paintings" data-text="Paintings" class={$page.url.pathname === '/paintings' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/paintings' ? 'page' : undefined}>Paintings</a></li>
-        <li role="none"><a href="/web design" data-text="Web Design" class={$page.url.pathname === '/web%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === '/web%20design' ? 'page' : undefined}>Web Design</a></li>
+        <li role="none"><a href="{base}/game design" data-text="Game Design" class={$page.url.pathname === base + '/game%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/game%20design' ? 'page' : undefined}>Game Design</a></li>
+        <li role="none"><a href="{base}/game dev" data-text="Game Development" class={$page.url.pathname === base + '/game%20dev' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/game%20dev' ? 'page' : undefined}>Game Development</a></li>
+        <li role="none"><a href="{base}/digital art" data-text="Digital Art" class={$page.url.pathname === base + '/digital%20art' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/digital%20art' ? 'page' : undefined}>Digital Art</a></li>
+        <li role="none"><a href="{base}/tattoo design" data-text="Tattoo Design" class={$page.url.pathname === base + '/tattoo%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/tattoo%20design' ? 'page' : undefined}>Tattoo Design</a></li>
+        <li role="none"><a href="{base}/paintings" data-text="Paintings" class={$page.url.pathname === base + '/paintings' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/paintings' ? 'page' : undefined}>Paintings</a></li>
     </ul>
 </nav>
 <style>
