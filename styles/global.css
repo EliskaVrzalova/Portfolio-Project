@@ -1,0 +1,87 @@
+/* ==============================
+   Global Styles with CSS Variables
+   ============================== */
+   @import url('https://fonts.googleapis.com/css2?family=DynaPuff');
+
+   :root {
+    /* Color Variables */
+    --primary-color: rgb(115, 54, 181);
+    --secondary-color: rgb(165, 71, 231);  
+    --background-color: rgb(191, 191, 191);
+    --text-color: #000000;
+    --link-hover-color: #ffffff;
+
+    /* Font Variables */
+    --font-family: "DynaPuff", serif;
+    --font-size-base: 20px;
+    --font-size-base-smaller:15px;
+    --font-size-h1: clamp(2rem, 5vw, 3.8rem);
+    --font-size-h2: clamp(1.5rem, 4vw, 2.5rem);
+    --font-size-h3: clamp(1rem, 3vw, 1.8rem);
+    --font-size-heading: clamp(2rem, 2.5vw, 3.5rem); 
+    --line-height-base: 1.6;
+
+    /* Spacing Variables */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 200px;
+    --max-width: 1200px;
+}
+
+/* ==============================
+   Global Reset - Ensures consistency across browsers
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==============================
+   Base Styles
+   ============================== */
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: var(--line-height-base);
+}
+
+/* ==============================
+   Headings
+   ============================== */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: var(--spacing-small);
+}
+h1{
+    font-size: var(--font-size-h1);
+}
+
+h2{
+    font-size: var(--font-size-h2);
+}
+
+h3{
+    font-size: var(--font-size-h3);
+}
+
+/* ==============================
+   Paragraphs
+   ============================== */
+p {
+    margin-bottom: var(--spacing-small);
+}
+
+/* ==============================
+   Links
+   ============================== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+img{
+    max-width 100%;
+    height:auto;
+}
