@@ -4,6 +4,7 @@
 </script>
 <nav role="navigation" aria-label="Portfolio categories">
     <ul role="menubar">
+        <li role="none"><a href="{base}/web design" data-text="Web Design" class={$page.url.pathname === base + '/web%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/web%20design' ? 'page' : undefined}>Web Design</a></li>
         <li role="none"><a href="{base}/game design" data-text="Game Design" class={$page.url.pathname === base + '/game%20design' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/game%20design' ? 'page' : undefined}>Game Design</a></li>
         <li role="none"><a href="{base}/game dev" data-text="Game Development" class={$page.url.pathname === base + '/game%20dev' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/game%20dev' ? 'page' : undefined}>Game Development</a></li>
         <li role="none"><a href="{base}/digital art" data-text="Digital Art" class={$page.url.pathname === base + '/digital%20art' ? 'active' : ''} role="menuitem" aria-current={$page.url.pathname === base + '/digital%20art' ? 'page' : undefined}>Digital Art</a></li>

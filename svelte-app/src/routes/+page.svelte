@@ -182,8 +182,9 @@
    }
    .hero-image-container{
      justify-content: flex-start;
-     transform: scale(0.7);
-     margin-top: -8rem;
+     transform: scale(0.9);
+     margin-top: -5rem;
+     margin-right: 2rem;
      filter: drop-shadow(0px 10px 15px rgba(0, 0, 0, 0.7));
    }
 

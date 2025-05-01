@@ -177,7 +177,7 @@
         top: 50%;
         left:100px;
         width:500px;
-        height:400px;
+        height:450px;
         text-align: left;
         color:white;
         background-color: rgb(115, 54, 181,0.8);
